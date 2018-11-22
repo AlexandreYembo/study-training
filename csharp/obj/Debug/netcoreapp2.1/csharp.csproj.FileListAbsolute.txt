@@ -1,0 +1,11 @@
+C:\GitRepository\hacker-hank-training\csharp\obj\Debug\netcoreapp2.1\csharp.csprojAssemblyReference.cache
+C:\GitRepository\hacker-hank-training\csharp\obj\Debug\netcoreapp2.1\csharp.csproj.CoreCompileInputs.cache
+C:\GitRepository\hacker-hank-training\csharp\obj\Debug\netcoreapp2.1\csharp.AssemblyInfoInputs.cache
+C:\GitRepository\hacker-hank-training\csharp\obj\Debug\netcoreapp2.1\csharp.AssemblyInfo.cs
+C:\GitRepository\hacker-hank-training\csharp\bin\Debug\netcoreapp2.1\csharp.deps.json
+C:\GitRepository\hacker-hank-training\csharp\bin\Debug\netcoreapp2.1\csharp.runtimeconfig.json
+C:\GitRepository\hacker-hank-training\csharp\bin\Debug\netcoreapp2.1\csharp.runtimeconfig.dev.json
+C:\GitRepository\hacker-hank-training\csharp\bin\Debug\netcoreapp2.1\csharp.dll
+C:\GitRepository\hacker-hank-training\csharp\bin\Debug\netcoreapp2.1\csharp.pdb
+C:\GitRepository\hacker-hank-training\csharp\obj\Debug\netcoreapp2.1\csharp.dll
+C:\GitRepository\hacker-hank-training\csharp\obj\Debug\netcoreapp2.1\csharp.pdb
