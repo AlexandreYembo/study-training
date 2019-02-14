@@ -1,5 +1,5 @@
 /* Implementation using Faceted Builder */
-namespace Builder{
+namespace Design_Patterns.Creational.BuilderFacets{
     public class Person{
         //address
         public string StreeAdress, PostCode, City;
@@ -8,7 +8,7 @@ namespace Builder{
         public string CompanyName, Position;
         public int AnnualIncome;
 
-        public override string ToString() => $"{nameof(StreeAdress)} : {StreeAdress}, {nameof(PostCode)} : {PostCode}, {nameof(City)} : {City}, {nameof(CompanyName)} : {CompanyName}, {nameof(Position)} : {Position}"
+        public override string ToString() => $"{nameof(StreeAdress)} : {StreeAdress}, {nameof(PostCode)} : {PostCode}, {nameof(City)} : {City}, {nameof(CompanyName)} : {CompanyName}, {nameof(Position)} : {Position}";
     }
 
     public class PersonBuilder // facade
@@ -41,7 +41,7 @@ namespace Builder{
     }
 
 
-    static void Main(string[] args){
+    // static void Main(string[] args){
 
-    }   
+    // }   
 }

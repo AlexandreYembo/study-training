@@ -1,6 +1,8 @@
 /* Implementation using Fluent Interface */
 
-namespace Builder{
+using System;
+
+namespace Design_Patterns.Creational.FluentBuilder{
     public class Person{
         public string Name;
         public string Position;
@@ -37,14 +39,14 @@ namespace Builder{
     : PersonInfoBuilder<PersonJobBuilder<T>>
     where T : PersonJobBuilder<T>
     {
-        public PersonJobBuilder WorkAsA(string position){
+        public T WorkAsA(string position){
             person.Position = position;
-            return this;
+            return (T)this;
         }
     }
 
-    internal class Program{
-        public static void Main(string[] args){
+    internal class Implement{
+        public static void Run(string[] args){
             var me = Person.New
                         .Called("Alexandre")
                         .WorkAsA("Software Developer")
