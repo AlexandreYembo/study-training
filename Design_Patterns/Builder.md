@@ -10,6 +10,7 @@
 
 ### Inherit:
 #### So in this case the self argument the self Generica argument actually refers to the class that's actually doing the inheritance so if you have food then you need to specify food as the argument to self and that's precisely why we have this constraint where self inherits from person info.
-`public class PersonInfoBuilder<T>
+```c#
+public class PersonInfoBuilder<T>
     : PersonBuilder
-    where T : PersonInfoBuilder<T>`
+    where T : PersonInfoBuilder<T>
