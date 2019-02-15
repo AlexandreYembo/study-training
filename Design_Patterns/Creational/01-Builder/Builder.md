@@ -23,7 +23,7 @@ public class PersonInfoBuilder<T>
 
 ### Problems:
 #### When we are building up on that same reference we have a single reference for a specific object (e.g. Person) being passed through all these sub builders and that's fine.
-### But #### if you have a `value type` you could be in trouble.
+### But if you have a `value type` you could be in trouble.
 
 #### More about Value type and Reference type: https://www.tutorialsteacher.com/csharp/csharp-value-type-and-reference-type
 

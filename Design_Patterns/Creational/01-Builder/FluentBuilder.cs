@@ -46,7 +46,7 @@ namespace Design_Patterns.Creational.FluentBuilder{
     }
 
     internal class Implement{
-        public static void Run(string[] args){
+        public static void Main(string[] args){
             var me = Person.New
                         .Called("Alexandre")
                         .WorkAsA("Software Developer")
