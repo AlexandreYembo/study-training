@@ -20,3 +20,68 @@ public class PersonInfoBuilder<T>
 ### Faceted Builder
 #### Facade is another pattern
 #### We use when single builder is not enough. For example in FluentBuilder example we habe a single builder. But depends on the project it will be necessary to implement several builders wich are responsible for building up several different aspects of a particular object and also want some sort of facade.
+
+### Problems:
+#### When we are building up on that same reference we have a single reference for a specific object (e.g. Person) being passed through all these sub builders and that's fine.
+### But #### if you have a `value type` you could be in trouble.
+
+#### More about Value type and Reference type: https://www.tutorialsteacher.com/csharp/csharp-value-type-and-reference-type
+
+### Important
+#### During the implementation you use this kind of call for a builder. e . g
+
+```c#
+var pb = new PersonBuilder();
+var person = pb
+    .Lives
+        .At("23 newcomen court")
+        .In("Dublin")
+        .WithPostCode("D03X11")
+    .Works
+        .At("Microsoft")
+        .AsA("Software Developer")
+        .Earning(1000);
+```
+#### You define person from Personbuilder using var. If you want to define a specific object type of Person, you need to implement implict operator:
+
+```c#
+public class PersonBuilder{
+    ...
+    public static implicit operator Person(PersonBuilder pb) => pb.person; 
+}
+
+//Implementation
+var pb = new PersonBuilder();
+Person person = pb
+    .Lives
+        .At("23 newcomen court")
+        .In("Dublin")
+        .WithPostCode("D03X11")
+    .Works
+        .At("Microsoft")
+        .AsA("Software Developer")
+        .Earning(1000);
+```
+
+#### Another solution you can use instead of implict operator, you can create a method. e.g
+
+```c#
+public class PersonBuilder{
+    ...
+    public Person Build() => person; 
+}
+
+//Implementation
+var pb = new PersonBuilder();
+Person person = pb
+    .Lives
+        .At("23 newcomen court")
+        .In("Dublin")
+        .WithPostCode("D03X11")
+    .Works
+        .At("Microsoft")
+        .AsA("Software Developer")
+        .Earning(1000)
+        .Build();
+```
+#### In that case, you need to call the method Build() in the last of chain of methods call.
