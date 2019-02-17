@@ -18,67 +18,62 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Design_Patterns.Creational.Builder.Exercise{
-    public class Code{
-        public string Name, Type;
+using System;
+using System.Collections.Generic;
+
+namespace Test
+{
+
+    class Field
+    {
+      public string Type, Name;
+
+      public override string ToString() => $"public {Type} {Name}";
     }
-    
-    public class CodeElement{
-        private const int indentSize = 2;
-        public Code code => new Code();
-        public List<CodeElement> Elements = new List<CodeElement>();
-      
-        public CodeElement(){         
-        }
 
-        public CodeElement(string name, string type){
-            code.Name = name;
-            code.Type = type;
-        }
+    class Class
+    {
+      public string Name;
+      public List<Field> Fields = new List<Field>();
 
-        private string Generate(int indent){
-            var sb = new StringBuilder();
-            var i = new String(' ', indentSize * indent);
-            sb.Append($"{i} {code.Type} {code.Name}\n");
-            sb.Append("{\n");
-            
-            // if(!string.IsNullOrWhiteSpace(code.Type)){
-            //     sb.Append(new string(' ', indentSize * (indent +1)));
-            //     sb.Append(code.Type);
-            //     sb.Append("\n");
+      public Class(){}
 
-            // }
-
-            foreach(var e in Elements)
-                sb.Append(e.Generate(indent +1));
-
-            sb.Append("}\n");
-        }
+      public override string ToString()
+      {
+        var sb = new StringBuilder();
+        sb.AppendLine($"public class {Name}").AppendLine("{");
+        
+        foreach (var f in Fields)
+          sb.AppendLine($"  {f};");
+        
+        sb.AppendLine("}");
+        
+        return sb.ToString();
+      }
     }
 
     public class CodeBuilder{
-        CodeElement classElement = new CodeElement();
-        private readonly string rootName;
-        protected Code code = new Code();
-
+        private Class oClass = new Class();
+        
         public CodeBuilder(string rootName){
-            this.rootName = rootName;
-            classElement.code.Name = rootName;
-            classElement.code.Type = "class";
+            oClass.Name = rootName;
         }
-
-         public CodeBuilder AddField(string name, string type){
-            var fieldElement = new CodeElement(name, type);
-            classElement.Elements.Add(fieldElement);
+        
+        public CodeBuilder AddField(string name, string type){
+            oClass.Fields.Add(new Field{Name = name, Type = type});
             return this;
         }
 
-        public override string ToString() => classElement.ToString();
+        public override string ToString() =>  this.oClass.ToString();
     }
-   
-    internal class Implement{
-         public static void Main(string[] args){
-             var cb = new CodeBuilder()
-         }
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var cb = new CodeBuilder("Person").AddField("Name", "String").AddField("Age", "int");
+            System.Console.Write(cb);
+        }
     }
 }
