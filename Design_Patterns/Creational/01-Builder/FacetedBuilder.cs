@@ -88,7 +88,7 @@ namespace Design_Patterns.Creational.BuilderFacets{
     #endregion
 
     internal class Implement{
-        public static void Main(string[] args){
+        public static void Run(string[] args){
             var pb = new PersonBuilder();
             Person person = pb
                     .Lives

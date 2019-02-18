@@ -68,9 +68,9 @@ namespace Test
     }
 
 
-    class Program
+    public class Implement
     {
-        static void Main(string[] args)
+        static void Run(string[] args)
         {
             var cb = new CodeBuilder("Person").AddField("Name", "String").AddField("Age", "int");
             System.Console.Write(cb);

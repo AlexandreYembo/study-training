@@ -3,9 +3,9 @@ C:\Git_Repositories\study-training\Design_Patterns\obj\Debug\netcoreapp2.2\Desig
 C:\Git_Repositories\study-training\Design_Patterns\obj\Debug\netcoreapp2.2\Design_Patterns.AssemblyInfoInputs.cache
 C:\Git_Repositories\study-training\Design_Patterns\obj\Debug\netcoreapp2.2\Design_Patterns.AssemblyInfo.cs
 C:\Git_Repositories\study-training\Design_Patterns\bin\Debug\netcoreapp2.2\Design_Patterns.deps.json
-C:\Git_Repositories\study-training\Design_Patterns\bin\Debug\netcoreapp2.2\Design_Patterns.runtimeconfig.json
-C:\Git_Repositories\study-training\Design_Patterns\bin\Debug\netcoreapp2.2\Design_Patterns.runtimeconfig.dev.json
 C:\Git_Repositories\study-training\Design_Patterns\bin\Debug\netcoreapp2.2\Design_Patterns.dll
 C:\Git_Repositories\study-training\Design_Patterns\bin\Debug\netcoreapp2.2\Design_Patterns.pdb
 C:\Git_Repositories\study-training\Design_Patterns\obj\Debug\netcoreapp2.2\Design_Patterns.dll
 C:\Git_Repositories\study-training\Design_Patterns\obj\Debug\netcoreapp2.2\Design_Patterns.pdb
+C:\Git_Repositories\study-training\Design_Patterns\bin\Debug\netcoreapp2.2\Design_Patterns.runtimeconfig.json
+C:\Git_Repositories\study-training\Design_Patterns\bin\Debug\netcoreapp2.2\Design_Patterns.runtimeconfig.dev.json

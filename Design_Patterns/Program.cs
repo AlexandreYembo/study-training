@@ -7,10 +7,13 @@ namespace Design_Patterns
         static void Main(string[] args)
         {
             Console.WriteLine("Creational.FluentBuilder");
-            Design_Patterns.Creational.FluentBuilder.Implement.Main(args);
+            Design_Patterns.Creational.FluentBuilder.Implement.Run(args);
 
             Console.WriteLine("Creational.BuilderFacets");
-            Design_Patterns.Creational.BuilderFacets.Implement.Main(args);
+            Design_Patterns.Creational.BuilderFacets.Implement.Run(args);
+
+            Console.WriteLine("Creational.FactoryMethod");
+            Design_Patterns.Creational.FactoryMethod.Implement.Run(args);
         }
     }
 }
