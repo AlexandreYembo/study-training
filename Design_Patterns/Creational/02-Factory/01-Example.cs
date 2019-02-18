@@ -1,6 +1,6 @@
 using System;
 
-namespace Design_Patterns.Creational.Factory1{
+namespace Design_Patterns.Creational.Example{
 public enum CoordinateSystem{
     Cartesian,
     Polar

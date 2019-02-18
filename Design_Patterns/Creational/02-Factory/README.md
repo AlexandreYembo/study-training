@@ -48,4 +48,45 @@ Now the only consequence of what we did is that we have not really hidden  the c
 ```c#
 var p = new Point(x, y);
 ```
+
+#### Factory
+*** I cannot simply make the constructor private, because the point factory is trying to access a private member which is not allowed. How can I mitigate the situation now if you are writing a library intended to be consumed by other users in there on the assembly. Then the solution is very simple you simply make the constructor internal and it wil solve the problems because it allows the use on the constructor within the current assembly.
+
+But if you need to use the contructor consuming that assembly from the outside it does not allow the use of the constructor.
+Now if you want to have a particular constraint right inside your own assembly then it is a bit of a problem, because in this case you have to do something completely different.
+
+```c#
+   public class Point{
+       ...
+       private Point(double x, double y){
+            this.x = x;
+            this.y = y;
+       }
+       ...
+       // You have class Factory inside Point class
+       public static class Factory
+        {
+            public static Point NewCartesianPoint(double x, double y) => new Point(x, y);
+            public static Point NewPolarPoint(double rho, double theta) => new Point(rho * Math.Cos(theta), rho * Math.Sin(theta));
+        }
+   }
+```
+
+and the basic implementation is:
+```c#
+    var point = Point.Factory.NewPolarPoint(1.0, Math.PI / 2);
+```
+
+
+Using properties and field for Factory.
+```c#
+    // Arrow makes it a property.
+    public static Point Origin => new Point(0, 0); 
+    
+    /* singleton field. Field gets initialized once. This one is better because you just initialize a static field once 
+    and that field is available to be used everywhere that you want but if you do need  to instantiate a new object anytime
+    somebody  asked for something then a property is a good alternative to a factory method.*/
+    public static Point Origin2 = new Point(0, 0);
+```
+
 #### Abstract Factory
