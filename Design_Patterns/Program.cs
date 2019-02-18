@@ -14,6 +14,12 @@ namespace Design_Patterns
 
             Console.WriteLine("Creational.FactoryMethod");
             Design_Patterns.Creational.FactoryMethod.Implement.Run(args);
+
+            Console.WriteLine("Creational.AbstractFactory");
+            Design_Patterns.Creational.AbstractFactory.Implementation.Run(args);
+
+            Console.WriteLine("Creational.AbstractFactoryOCP");
+            Design_Patterns.Creational.AbstractFactoryAndOCP.Implementation.Run(args);
         }
     }
 }

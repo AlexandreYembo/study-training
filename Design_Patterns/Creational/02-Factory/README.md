@@ -90,3 +90,5 @@ Using properties and field for Factory.
 ```
 
 #### Abstract Factory
+The only use of an abstract factory is to give out abstract objects as opposed to concrete objects.
+In abstract setting you are not returning the types you are creating. You might want to hold on if you are not returning the types you are actually asked by the client whether you are returning and the answer is you are returnin abstract classes or interfaces.
