@@ -20,6 +20,18 @@ namespace Design_Patterns
 
             Console.WriteLine("Creational.AbstractFactoryOCP");
             Design_Patterns.Creational.AbstractFactoryAndOCP.Implementation.Run(args);
-        }
+        
+	    Console.WriteLine("Creational.Prototype.CloneableIsBad");
+	    DesignPatterns.Creational.Prototype.CloneableIsBad.Implement.Run(args);
+
+	    Console.WriteLine("Creational.Prototype.CopyConstructors");
+            DesignPatterns.Creational.Prototype.CopyConstructors.Implement.Run(args);
+
+            Console.WriteLine("Creational.Prototype.ExplicitDeepCopyInterface");
+            DesignPatterns.Creational.Prototype.ExplicitDeepCopyInterface.Implement.Run(args);
+
+	    Console.WriteLine("Creational.Prototype.CopyThroughSerialization");
+            DesignPatterns.Creational.Prototype.CopyThroughSerialization.Implement.Run(args);
+	}
     }
 }
