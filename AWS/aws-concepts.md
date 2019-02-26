@@ -21,3 +21,17 @@ But you can drop out  of 3000 users then you can pull back and you can shrink th
 ## Introduction - VPC
 
 AWS -> VPC (Amazon EC2 - Computer Power, Amazon RDS - Database and Amazon S3 -Storage)
+
+#### VPC -> Virtual Private Cloud
+  Is your private section of AWS, where you can place AWS resources, and allow/restrict access to them.
+E.g. Facebook (People access facebook, we have Your homepage, My homePage and Friend's home page) in that case we have (Your VPC, My VPC and Friend's VPC).
+In which VPC we have AWS EC2, AWS RDS.
+
+#### AWS EC2 ->  
+
+
+
+
+##### AWS RDS ->
+
+##### AWS S3 ->
