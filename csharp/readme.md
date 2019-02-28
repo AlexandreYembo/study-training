@@ -91,4 +91,5 @@ The following piece of code does not compile. Why?
 ### Tips
 #### Understanding Yield Return in C#
 The yield keyword signals to the compiler that the method in which it appears is an iterator block. The compiler generates a class to implement the behavior that is expressed in the iterator block.
+
 Link reference: https://www.c-sharpcorner.com/UploadFile/5ef30d/understanding-yield-return-in-C-Sharp/
