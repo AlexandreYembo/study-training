@@ -1,3 +1,3 @@
-![Alt text](https://github.com/AlexandreYembo/study-training/blob/master/csharp/csharp-fundamentals.md "C# Fundamentals")
+[C# Fundamentals](https://github.com/AlexandreYembo/study-training/blob/master/csharp/csharp-fundamentals.md) 
 
-![Alt text](https://github.com/AlexandreYembo/study-training/blob/master/csharp/iterator-block.md "Iterator Block")
+[Iterator Block](https://github.com/AlexandreYembo/study-training/blob/master/csharp/iterator-block.md)
