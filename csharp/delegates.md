@@ -107,6 +107,7 @@ We could use one of the existing Delegates that come in .NET framework.
 ```
 ### Why do we need delegates?
   1- For designing extensible and flexible applications (eg. frameworks)
+  
   2- Alternative: Interfaces.
   
 #### Interfaces or Delegates?
