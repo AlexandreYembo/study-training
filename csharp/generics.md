@@ -14,6 +14,7 @@ where T : new() --> T is an object that has a default constructor.
   public class Utilities<T> where T : IComparable
   {
     public int Max(int a, int b) => a > b ? a : b;
+    
     public T Max(T a, T b) => a.CompareTo(b) > 0 ? a : b;
   }
 ```
@@ -71,7 +72,9 @@ where T : new() --> T is an object that has a default constructor.
   public class Utilities<T> where T : IComparable, new()
   {
     public int Max(int a, int b) => a > b ? a : b;
+    
     public T Max(T a, T b) => a.CompareTo(b) > 0 ? a : b;
+    
     public void DoSomething(T value){
         // if you need to instantiate "T" here you need a default constructor.
         // in this case you need to instance new() in the class
