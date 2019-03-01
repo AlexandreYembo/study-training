@@ -16,7 +16,9 @@ For designing extensible and flexible applications (eg. frameworks)
 2- Pass a Delegate to the method
 ```c#
   public void Process(string path, PhotoFilterHandler filterHandler){
-    filterHandler(photo);   
+    var photo = Photo.Load(path);
+    filterHandler(photo);
+    photo.Save();
   }
 ```
   1- this code does not know what filter will be applied
@@ -59,9 +61,49 @@ I will have in 2 filters
       {
         ...
       }
+   }
 ```
 
 ##### Every delegate in .NEt that we create with the Delegate keyword is essentially a class. that derives from multicast Delegate.
 ##### That class multicast Delegate is derived from System.Delegate.
 #### The difference between delegate and multicast Delegate is that multicast Delegate allows us to have multiple function pointers.
 
+We could use one of the existing Delegates that come in .NET framework.
+##### In .NET we have two delegates that are generic and they are Action and Func.
+##### The difference between Func and Action is:
+  Func -> points to a method that returns a value.
+  Action -> point to a method that returns void.
+  
+```c#
+  //Define the signature for the delegate
+   public class PhotoProcessor
+   {
+       public void Process(string path, Action<Photo> filterHandler){
+          var photo = Photo.Load(path);
+          filterHandler(photo);
+          photo.Save();  
+      }
+   }
+   
+   class Program
+   {
+      static void Main(string[] args)
+      {
+        ...
+         var processor = new PhotoProcessor(); // PhotoProcessos instantiated.
+          var filters = new PhotoFilters()    // instance of PhotoFilters.
+          //Instead of using Custom delegate, we use Action
+          Action<Photo> filterHandler = filters.ApplyBrightness; // Instance of the delegate.
+          filterHandler += filters.ApplyContrast;
+          filterHandler += RemoveRedEyeFilter;
+          processor.Process("photo.jpg", filterHandler);
+      }
+      
+      //use the same signature of delegate
+      static void RemoveRedEyeFilter(Photo photo)
+      {
+        ...
+      }
+   }
+   
+```
