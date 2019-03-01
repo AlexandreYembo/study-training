@@ -45,6 +45,7 @@ That is when a delegate comes in.
   
 ##### How to implement?
 We have 3 steps for this:
+
   1- Define a delegate.
     That is, the contract or the agreement between the publisher and the subscriber.
     Delegate determines the signature of the method and the subscriber that will be called when the publisher in this VideoEncoder, publishes an event.
@@ -53,18 +54,121 @@ We have 3 steps for this:
   
   3- Raise or publish the event.
 
- ```c#
+##### 1- Define a delegate
+```c#
+    // this is a convention
+    public delegate void VideoEncodedEventHandler(object source, EventArgs args);
+```
+
+##### 2- Define an event based on that delegate
+```c#
+    // this is a convention
+    public event VideoEncodedEventHandler VideoEncoded;
+```
+##### 3- Raise or publish the event.
+```c#
+    // the method should be declared as protected
+    // this is a convention
+    protected virtual void OnVideoEncoded(){
+      
+    }
+```
+You just call the method here!
+```c#
+    public void Encode(Video video)
+    {
+      Console.WriteLine("Encoding Video...");
+      Thread.Sleep(3000);
+      
+      OnVideoEncoded(); //call the method here!
+    }
+```
+How to notify de subscriber?
+```c#    
+    protected virtual void OnVideoEncoded()
+    {
+        if(VideoEncoded != null)
+        {
+            VideoEncoded(this, EventArgs.Empty); // this my current class
+        }
+    }
+```
+Now you are going to create a couple of subscribers.
+I will create a method . This is the event handler. This method should be avoid.
+```c#    
+    public class MailService      //Subscriber 1
+    {
+        //This is the event handler.
+        public void OnVideoEncoded(object source, EventArgs args)
+        {
+            Console.WriteLine("MailService: Sending an email...");
+        }
+    }
+    
+    public class MessageService   //Subscriber 2
+    {
+        public void OnVideoEncoded(object source, EventArgs args)
+        {
+            Console.WriteLine("MessageService: Sending a text message...");
+        }
+    }
+``
+Now we need to do is to subscribe this email service to the video encoded event of VideoEncoder.
+```c#   
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            var video = new Video() { Title = "Video 1" };
+            var videoEncoder = new VideoEncoder(); //publisher
+            var mailService = new MailService(); //subscriber
+            var messageService = new MessageService() //subscriber
+            
+            // this method is an event.
+            videoEncoder.VideoEncoded += mailService.OnVideoEncoded; // This is a reference or a pointer to that method
+            videoEncoder.VideoEncoded += messageService.OnVideoEncoded;
+            
+            videoEncoder.Encode(video);
+        }
+    }
+```
+It looks at that list.
+``` c# 
+videoEncoder.VideoEncoded += mailService.OnVideoEncoded;
+```
+Here we look at that list, and if it is not empty, that someone subscribed to that event which means we have a pointer to an event handler method and we are going to call that like this.
+``` c# 
+  if(VideoEncoded != null)
+  {
+      VideoEncoded(this, EventArgs.Empty); // this my current class
+  }
+```
+
+
+ ```c# Video.cs
     public class Video
     {
       public string Title {get;set;}
     }
-    
+ ```
+ ```c# VideoEncoder.cs   
     public class VideoEncoder
     {
+      public delegate void VideoEncodedEventHandler(object source, EventArgs args);
+      public event VideoEncodedEventHandler VideoEncoded;
+     
+      protected virtual void OnVideoEncoded(){
+           if(VideoEncoded != null)
+            {
+                VideoEncoded(this, EventArgs.Empty); // this my current class
+            }
+      }
+     
       public void Encode(Video video)
       {
         Console.WriteLine("Encoding Video...");
         Thread.Sleep(3000);
+        OnVideoEncoded();
       }
     }
 
