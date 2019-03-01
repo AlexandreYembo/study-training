@@ -112,6 +112,7 @@ We could use one of the existing Delegates that come in .NET framework.
 #### Interfaces or Delegates?
 ##### Use delegate when:
   1- An eventing design patterns is used.
+  
   2- The caller does not need to access other properties or methods on the object implementing the method.
 In the case of the example the filters photo just one basic simple method and there were no other properties or methods.
 But if PhotoProcessor needed  to access pther properties or methods, obviously a Delegate would not work and we have to use an interface.
