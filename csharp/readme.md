@@ -1,4 +1,4 @@
-# Advanced Topics C# for interview
+# Advanced topics C# in for interview
 
 1- [C# Fundamentals](https://github.com/AlexandreYembo/study-training/blob/master/csharp/csharp-fundamentals.md) 
 
