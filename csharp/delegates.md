@@ -1,9 +1,6 @@
 # Delegates
   1 - An object that knows how to call a method or a group of methods.
   2- A reference or a pointer to a function.
-  
-### Why do we need delegates?
-For designing extensible and flexible applications (eg. frameworks)
 
 #### How do we use Delegate to make this extensible?
 
@@ -108,3 +105,13 @@ We could use one of the existing Delegates that come in .NET framework.
    }
    
 ```
+### Why do we need delegates?
+  1- For designing extensible and flexible applications (eg. frameworks)
+  2- Alternative: Interfaces.
+  
+#### Interfaces or Delegates?
+##### Use delegate when:
+  1- An eventing design patterns is used.
+  2- The caller does not need to access other properties or methods on the object implementing the method.
+In the case of the example the filters photo just one basic simple method and there were no other properties or methods.
+But if PhotoProcessor needed  to access pther properties or methods, obviously a Delegate would not work and we have to use an interface.
