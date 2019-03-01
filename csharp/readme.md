@@ -5,3 +5,5 @@
 3- [Generics](https://github.com/AlexandreYembo/study-training/blob/master/csharp/generics.md)
 
 4- [Delegates](https://github.com/AlexandreYembo/study-training/blob/master/csharp/delegates.md)
+
+5- [Lambda Expressions ](https://github.com/AlexandreYembo/study-training/blob/master/csharp/lambda-expressions.md)
