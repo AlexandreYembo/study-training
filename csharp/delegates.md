@@ -72,6 +72,7 @@ We could use one of the existing Delegates that come in .NET framework.
 ##### In .NET we have two delegates that are generic and they are Action and Func.
 ##### The difference between Func and Action is:
   Func -> points to a method that returns a value.
+  
   Action -> point to a method that returns void.
   
 ```c#
