@@ -173,3 +173,61 @@ Here we look at that list, and if it is not empty, that someone subscribed to th
     }
 
 ```
+##### Here we have a delegate which actually it is a reference to method or the event handler. That method should be avoid with these 2 parameters.
+
+### How to send a reference to the video?
+The subscriber knows which video we encoded.
+Instead of using EventArgs we need a custom class. That class should derive from EventArgs
+```c#
+  public class VideoEventArgs : EventArgs
+  {
+    public Video Video { get; set; }
+  }
+```
+Now we change this code
+
+```c#
+  public delegate void VideoEncodedEventHandler(object source, EventArgs args);
+ ```
+ to
+ ```c#
+  public delegate void VideoEncodedEventHandler(object source, VideoEventArgs args);
+ ```
+```c# 
+  protected virtual void OnVideoEncoded(Video video){
+           if(VideoEncoded != null)
+            {
+                //VideoEncoded(this, EventArgs.Empty); // Throw an error because I am not using EventArgs.
+                VideoEncoded(this, new VideoEventArgs() { Video = video});
+            }
+      }
+ ```
+ I need to pass the parameter for the method OnVideoEncoded
+ ```c# 
+  public void Encode(Video video)
+      {
+        Console.WriteLine("Encoding Video...");
+        Thread.Sleep(3000);
+        OnVideoEncoded(video);
+      }
+ ```
+ And of course we need to change all subscribers that are using this delegate
+ I will create a method . This is the event handler. This method should be avoid.
+```c#    
+    public class MailService      //Subscriber 1
+    {
+        //This is the event handler.
+        public void OnVideoEncoded(object source, VideoEventArgs args)
+        {
+            Console.WriteLine("MailService: Sending an email..." + args.Video.Title);
+        }
+    }
+    
+    public class MessageService   //Subscriber 2
+    {
+        public void OnVideoEncoded(object source, VideoEventArgs args)
+        {
+            Console.WriteLine("MessageService: Sending a text message..." + args.Video.Title);
+        }
+    }
+``
