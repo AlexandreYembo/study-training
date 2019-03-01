@@ -1,3 +1,5 @@
+# Advanced Topics C# for interview
+
 1- [C# Fundamentals](https://github.com/AlexandreYembo/study-training/blob/master/csharp/csharp-fundamentals.md) 
 
 2- [Iterator Block](https://github.com/AlexandreYembo/study-training/blob/master/csharp/iterator-block.md)
@@ -6,4 +8,6 @@
 
 4- [Delegates](https://github.com/AlexandreYembo/study-training/blob/master/csharp/delegates.md)
 
-5- [Lambda Expressions ](https://github.com/AlexandreYembo/study-training/blob/master/csharp/lambda-expressions.md)
+5- [Lambda Expressions](https://github.com/AlexandreYembo/study-training/blob/master/csharp/lambda-expressions.md)
+
+6- [Events](https://github.com/AlexandreYembo/study-training/blob/master/csharp/events.md)
