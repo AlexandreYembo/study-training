@@ -40,4 +40,32 @@ That is when a delegate comes in.
 
 
 ## Delegates
-  1- 
+  1- Agreement / Contract between Publisher and Subscriber.
+  2- Determines the signature of the event handler method in Subscriber.
+  
+##### How to implement?
+We have 3 steps for this:
+  1- Define a delegate.
+    That is, the contract or the agreement between the publisher and the subscriber.
+    Delegate determines the signature of the method and the subscriber that will be called when the publisher in this VideoEncoder, publishes an event.
+  
+  2- Define an event based on that delegate.
+  
+  3- Raise or publish the event.
+
+ ```c#
+    public class Video
+    {
+      public string Title {get;set;}
+    }
+    
+    public class VideoEncoder
+    {
+      public void Encode(Video video)
+      {
+        Console.WriteLine("Encoding Video...");
+        Thread.Sleep(3000);
+      }
+    }
+
+```
