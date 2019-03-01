@@ -230,4 +230,20 @@ Now we change this code
             Console.WriteLine("MessageService: Sending a text message..." + args.Video.Title);
         }
     }
-``
+```
+
+### Simple way to achieve the same thing with writing less code !!!
+So in .Net we have a delegate type which is called EventHandler and we have 2 forms:
+```c#
+  EventHandler
+  EventHandler<TEventArgs>
+```
+##### instead of create a delegate
+```c#
+  public event EventHandler<VideoEventArgs> VideoEncoded
+  //or
+  // public event EventHandler VideoEncoded
+  
+  //in this case we can remove this delegate
+  //public delegate void VideoEncodedEventHandler(object source, EventArgs args);
+```
