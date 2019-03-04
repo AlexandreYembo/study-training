@@ -25,9 +25,12 @@ Creational design patterns provide various object creation mechanisms, which inc
         7- You can use along with Bridge. This pairing is useful when some abstractions defined by Bridge can only work with specific implementations. In this case, Abstract Factory can encapsulate there relations and hide the complexity from the client code. 
         8- Can be implemented as Singletons.
 ### Builder
-        Separates object construction from its representation
-        1- Focuses on constructing a complex object step by step.
-        2- Returns the product as a final step.
+        1- Separates object construction from its representation
+        2- Focuses on constructing a complex object step by step.
+        3- Returns the product as a final step.
+        4- You can use Builder when creating complex Composite trees because you can program its construction steps to work recursively.
+        5- You can combine with Bridge: the director class plays the role of the abstraction, while different builders act as implementations.
+        6- Can be implemented as Singletons.
 ### Factory Method
         Creates an instance of several derived classes
 ### Object Pool
