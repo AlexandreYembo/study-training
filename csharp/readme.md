@@ -13,3 +13,5 @@
 6- [Events and Delegates](https://github.com/AlexandreYembo/study-training/blob/master/csharp/events_and_delegates.md)
 
 7- [Extension Methods](https://github.com/AlexandreYembo/study-training/blob/master/csharp/extension-methods.md)
+
+8- [LINQ](https://github.com/AlexandreYembo/study-training/blob/master/csharp/linq.md)
