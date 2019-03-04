@@ -32,7 +32,10 @@ Creational design patterns provide various object creation mechanisms, which inc
         5- You can combine with Bridge: the director class plays the role of the abstraction, while different builders act as implementations.
         6- Can be implemented as Singletons.
 ### Factory Method
-        Creates an instance of several derived classes
+        1- Creates an instance of several derived classes
+        2- Abstract FActory classes are often based on a set of Factory Methods, but you can also use Prototype to compose the methods on these classes.
+        3- You can use along with Iterator to let collection subsclasses return different types of iterators that are compatible with the collections.
+        4- Is a specialization of Template Method. At the same time, a Factory Method may servce as a step in a large Template Method.
 ### Object Pool
         Avoid expensive acquisition and release of resources by recycling objects that are no longer in use
 ### Prototype
