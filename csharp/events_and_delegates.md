@@ -112,7 +112,7 @@ I will create a method . This is the event handler. This method should be avoid.
             Console.WriteLine("MessageService: Sending a text message...");
         }
     }
-``
+```
 Now we need to do is to subscribe this email service to the video encoded event of VideoEncoder.
 ```c#   
     public class Program
