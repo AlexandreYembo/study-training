@@ -11,3 +11,5 @@
 5- [Lambda Expressions](https://github.com/AlexandreYembo/study-training/blob/master/csharp/lambda-expressions.md)
 
 6- [Events and Delegates](https://github.com/AlexandreYembo/study-training/blob/master/csharp/events_and_delegates.md)
+
+7- [Extension Methods](https://github.com/AlexandreYembo/study-training/blob/master/csharp/extension-methods.md)
