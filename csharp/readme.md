@@ -17,3 +17,5 @@
 8- [LINQ](https://github.com/AlexandreYembo/study-training/blob/master/csharp/linq.md)
 
 9- [Nullable Types](https://github.com/AlexandreYembo/study-training/blob/master/csharp/nullable-types.md)
+
+10- [Dynamic](https://github.com/AlexandreYembo/study-training/blob/master/csharp/dynamic.md)
