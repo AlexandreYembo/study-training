@@ -19,3 +19,5 @@
 9- [Nullable Types](https://github.com/AlexandreYembo/study-training/blob/master/csharp/nullable-types.md)
 
 10- [Dynamic](https://github.com/AlexandreYembo/study-training/blob/master/csharp/dynamic.md)
+
+11- [Exception Handling](https://github.com/AlexandreYembo/study-training/blob/master/csharp/exception-handling.md)
