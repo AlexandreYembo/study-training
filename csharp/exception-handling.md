@@ -56,3 +56,44 @@ File handles, database connections, network connections, graphic handles and in 
 ```
 When we use the Using statement internally the compiler will create a finally block under the hood which call the Dispose method
 of StreamReader
+
+### Custom Exception
+```c#
+  public class YoutubeException : Exception
+  {
+      public YoutubeException(string message, Exception innerException)
+        : base(message, innerException)
+      {
+      }
+  }
+```
+```c#
+  //implementation
+    public class VideoAPI
+    {
+        public List<Video> GetVideo(string user)
+        {
+            try
+            {}
+            catch(Exception ex)
+            {
+                throw new YoutubeException("Could not fetch the video from Youtube", ex);
+            }
+        }
+    }
+```
+```c#
+  //implementing class
+    public void Run(string[] args){
+        try
+        {
+            var videoApi = new VideoAPI();
+            var videos = videoApi.GetVideo("alexandre");
+        }
+        catch (Exception ex)dsssssssdd
+        {
+            Console.WriteLine(ex.Message); // Will return an exception from YoutubeException;
+        }
+        
+    }
+```
