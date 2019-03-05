@@ -15,3 +15,5 @@
 7- [Extension Methods](https://github.com/AlexandreYembo/study-training/blob/master/csharp/extension-methods.md)
 
 8- [LINQ](https://github.com/AlexandreYembo/study-training/blob/master/csharp/linq.md)
+
+9- [Nullable Types](https://github.com/AlexandreYembo/study-training/blob/master/csharp/nullable-types.md)
