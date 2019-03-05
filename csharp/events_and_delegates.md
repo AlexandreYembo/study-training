@@ -83,7 +83,7 @@ You just call the method here!
       OnVideoEncoded(); //call the method here!
     }
 ```
-How to notify de subscriber?
+How to notify the subscriber?
 ```c#    
     protected virtual void OnVideoEncoded()
     {
