@@ -23,3 +23,15 @@
 11- [Exception Handling](https://github.com/AlexandreYembo/study-training/blob/master/csharp/exception-handling.md)
 
 12- [Asynchronous Programming with Async / Await](https://github.com/AlexandreYembo/study-training/blob/master/csharp/async-await.md)
+
+Garbage collector
+Heap/Stak
+Interface
+Abstract class
+Func
+Action
+Compiler, managed assemblit, CLT, JIT Compiler, Machine Code (https://docs.microsoft.com/en-us/dotnet/csharp/getting-started/introduction-to-the-csharp-language-and-the-net-framework)
+Threading
+Task
+Keyword Lock
+CurrentBag
