@@ -21,3 +21,5 @@
 10- [Dynamic](https://github.com/AlexandreYembo/study-training/blob/master/csharp/dynamic.md)
 
 11- [Exception Handling](https://github.com/AlexandreYembo/study-training/blob/master/csharp/exception-handling.md)
+
+12- [Asynchronous Programming with Async / Await](https://github.com/AlexandreYembo/study-training/blob/master/csharp/async-await.md)
