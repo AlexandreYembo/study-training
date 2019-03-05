@@ -33,13 +33,20 @@ Creational design patterns provide various object creation mechanisms, which inc
         6- Can be implemented as Singletons.
 ### Factory Method
         1- Creates an instance of several derived classes
-        2- Abstract FActory classes are often based on a set of Factory Methods, but you can also use Prototype to compose the methods on these classes.
+        2- Abstract Factory classes are often based on a set of Factory Methods, but you can also use Prototype to compose the methods on these classes.
         3- You can use along with Iterator to let collection subsclasses return different types of iterators that are compatible with the collections.
         4- Is a specialization of Template Method. At the same time, a Factory Method may servce as a step in a large Template Method.
+        5- Is based on inheritance but doesn’t require an initialization step.
 ### Object Pool
         Avoid expensive acquisition and release of resources by recycling objects that are no longer in use
 ### Prototype
-        A fully initialized instance to be copied or cloned
+        1- A fully initialized instance to be copied or cloned
+        2- An object that supports cloning is called a prototype.
+        3- Can help when you need to save copies of (Commands another pattern) into history.
+        4- Designs that make heavy use of Composite and Decorator can often benefit from using Prototype. Applying the pattern lets you clone complex structures instead of re-constructing them from scratch.
+        5- Isn’t based on inheritance, so it doesn’t have its drawbacks. On the other hand, Prototype requires a complicated initialization of the cloned object.
+        6- Sometimes Prototype can be a simpler alternative to (Memento another pattern). This works if the object, the state of which you want to store in the history, is fairly straightforward and doesn’t have links to external resources, or the links are easy to re-establish.
+        7- Can all be implemented as Singletons.
 ### Singleton
         A class of which only a single instance can exist
 
