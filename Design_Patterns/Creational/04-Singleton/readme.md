@@ -1,13 +1,24 @@
 # Singleton
 ### Motivation
-#### For some components it only makes sense to have one in the system
-    1- Database repository (object access database)
-    2- Object factory (e.g You have a separate factory component which actually just creates some components do you really want more than one instance of it. Well not really because a factory is not supposed to have any state. )
-#### E.g., the constructor call is expensive
+###### This pattern solves two problems at the same time, violating the Single Responsability Principle:
+    1- Ensure that a class has just a single instance.
+        - For some components it only makes sense to have one in the system: 
+            eg. Database repository (object access database)
+                Object factory (e.g You have a separate factory component which actually just creates 
+                some components do you really want more than one instance of it. Well not really 
+                because a factory is not supposed to have any state.)
+    2- Provide a global access point to that instance.
+        - Just like a global variable, the Singleton pattern lets you access some object from anywhere 
+        in the program.
+        - It also protects that instance from being overwritten by other code.
+    
+**** Note that this behavior is impossible to implement with a regular constructor since a constructor call must always return a new object by design.  
+    
+###### E.g., the constructor call is expensive
     1- We only do it once
     2- We provide everyone with the same instance
-#### Want to prevent anyone creating additional copies
-#### Need to take care of lazy instantiation and thread safety
+###### Want to prevent anyone creating additional copies
+###### Need to take care of lazy instantiation and thread safety
 
 ### Implementation
 ```c#
