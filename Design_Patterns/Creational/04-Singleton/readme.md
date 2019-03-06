@@ -1,6 +1,5 @@
 # Singleton
 ### Motivation
-###### This pattern solves two problems at the same time, violating the Single Responsability Principle:
     1- Ensure that a class has just a single instance.
         - For some components it only makes sense to have one in the system: 
             eg. Database repository (object access database)
@@ -48,4 +47,13 @@ Now nobody can make more than one instance because there is no way of actually c
 So this way instead of returning instance you turn instance the value and this construct allows you to only create the sync of the database when somebody accesses the instance because that's when you get the value.
 Lazy it's thread safe it's you know everything that you want it to be.
 
-#### Why singleton is bad
+#### Pros
+   - You can be sure that a class has only a single instance.
+   - You gain a global access point to that instance.
+   - The singleton object is initialized only when it is requested for the first time.
+
+#### Cons
+   - Violates the Single Responsability Principle. The pattern solves two problems at the time.
+   - Can mask bad design for instance, when the components of the program know too much about each other.
+   - Requires special treatment in a multithreaded environment so that multiple threads wont't create a singleton object several times.
+   - Difficult to unit test the client code of the Singleton because many test frameworks rely on inheritance when producing mock objects.
