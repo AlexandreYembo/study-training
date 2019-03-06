@@ -24,6 +24,8 @@
 
 12- [Asynchronous Programming with Async / Await](https://github.com/AlexandreYembo/study-training/blob/master/csharp/async-await.md)
 
+13- [Quiz 2](https://github.com/AlexandreYembo/study-training/blob/master/csharp/quiz2.md)
+
 Garbage collector
 Heap/Stak
 Interface
