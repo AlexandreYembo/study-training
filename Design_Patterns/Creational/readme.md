@@ -48,7 +48,8 @@ Creational design patterns provide various object creation mechanisms, which inc
         6- Sometimes Prototype can be a simpler alternative to (Memento another pattern). This works if the object, the state of which you want to store in the history, is fairly straightforward and doesn’t have links to external resources, or the links are easy to re-establish.
         7- Can all be implemented as Singletons.
 ### Singleton
-        A class of which only a single instance can exist
+        1- A class of which only a single instance can exist while providing a global access point to this instance.
+        2- 
 
 ## Structural design patterns
 
