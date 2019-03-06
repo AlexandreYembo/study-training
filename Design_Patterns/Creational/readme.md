@@ -49,7 +49,11 @@ Creational design patterns provide various object creation mechanisms, which inc
         7- Can all be implemented as Singletons.
 ### Singleton
         1- A class of which only a single instance can exist while providing a global access point to this instance.
-        2- 
+        2- A Facade class can often be transformed into a Singleton since a single facade object is sufficient in most cases.
+        3- Flyweight would resemble Singleton if you somehow managed to reduce all shared states of the objects to just one flyweight object. But there are two fundamental differences between these patterns:
+            - There should be only one Singleton instance, whereas a Flyweight class can have multiple instances with different intrinsic states.
+            - The Singleton object can be mutable. Flyweight objects are immutable.
+        4- Can be implemented by using Abstract Factories, Builders and Prototypes.
 
 ## Structural design patterns
 
