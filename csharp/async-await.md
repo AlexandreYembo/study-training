@@ -50,4 +50,4 @@ You use await when the rest of that method cannot be executed until the result i
 ##### For Web application
   Typically in a web application, when a request comes to the server, a thread is allocated to handle that request. During execution of that request, if there is a blocking operation that thread is going to be busy and the machine has a limited number of threads. In that case, if we have a lot of concurrent connections and all threads are busy waiting for a blocking operation, that server becomes unresponsive. The only way is add more server which is scalling out.
   We can improve this by using an asynchronous model. When you execute a blocking operation, the control immediatelly returns to the thread, and that thread can be used to handle another request.
-### This model we can Scale up instead of scalling out. 
+##### This model we can Scale up instead of scalling out. 
