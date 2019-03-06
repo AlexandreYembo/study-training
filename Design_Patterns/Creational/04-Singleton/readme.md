@@ -21,6 +21,11 @@
 ###### Need to take care of lazy instantiation and thread safety
 
 ### Implementation
+    1- Define the default constructor private, to prevent other objects from using the 
+    new operator with the singleton class.
+    2- Create a static creation method that acts as a constructor. (Basically, this method 
+    call the private constructor to create an object and save it in a static field..
+        (All following calls to this method return the cached object).
 ```c#
       public class SingletonDatabase : IDatabase
       {
