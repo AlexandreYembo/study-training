@@ -27,6 +27,10 @@
 13- [Garbage collector](https://github.com/AlexandreYembo/study-training/blob/master/csharp/garbage-collector.md)
 
 
+[C# 6.0](https://github.com/AlexandreYembo/study-training/blob/master/csharp/C-6-Cheat-Sheet.pdf.md)
+
+
+
 Heap/Stak
 Interface
 Abstract class
