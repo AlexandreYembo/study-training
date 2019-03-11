@@ -24,3 +24,8 @@ https://sourcemaking.com/design_patterns/adapter
 
 ### Solution
   You can create adapter to resolve.
+   1- The adapter gets an interface, compatible with one of the existing objects.
+   2- Using this interface, the existing object can safely call the adapter's methods.
+   3- Upon receiving a call, the adapter passes the request to the second object, but in a format and order that the second object expects.
+   
+ ##### Sometimes it is even possible to create a two-way adapter that can convert the calls in both directions.
