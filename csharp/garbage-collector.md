@@ -22,3 +22,5 @@ In CLR the garbage collector is used as an automatic memory manager.
   3- Committed: The block of memory is assigned to physical storage.
   
   After the Garbage Collector is initialized by the CLR, it allocates a segment of memory to store and manage objects. This memory is called the Managed Heap
+
+#### Performance Analysis Tools
