@@ -33,3 +33,14 @@ https://sourcemaking.com/design_patterns/adapter
    3- Upon receiving a call, the adapter passes the request to the second object, but in a format and order that the second object expects.
    
  ##### Sometimes it is even possible to create a two-way adapter that can convert the calls in both directions.
+ 
+ ### Structure
+  The implementation uses the composition principle: the adapter implements the interface of one object and wraps the other one.
+  
+  You have:
+  ```c#
+  Client ->   Client Interface <interface>    <- Adapter                    <->     Service
+                    +method(data)              +method(data)                        +ServiceMethod(specialData)
+                                               +ConvertToServiceFormat(data)
+                                               +return ServiceMethod(specialData)
+```
