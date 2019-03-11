@@ -14,8 +14,11 @@ In CLR the garbage collector is used as an automatic memory manager.
 
 #### Fundamentals of memory
 - Virtual Memory can be in three states:
+
   1- Free: The block of memory has no references to it and is available for allocation.
+  
   2- Reserved: The block of memory is available for use and cannot be used for any other allocation request. However, you cannot store data to this memory block until it is committed.
+  
   3- Committed: The block of memory is assigned to physical storage.
   
   After the Garbage Collector is initialized by the CLR, it allocates a segment of memory to store and manage objects. This memory is called the Managed Heap
