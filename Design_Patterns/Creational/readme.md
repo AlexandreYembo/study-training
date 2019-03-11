@@ -54,8 +54,3 @@ Creational design patterns provide various object creation mechanisms, which inc
             - There should be only one Singleton instance, whereas a Flyweight class can have multiple instances with different intrinsic states.
             - The Singleton object can be mutable. Flyweight objects are immutable.
         4- Can be implemented by using Abstract Factories, Builders and Prototypes.
-
-## Structural design patterns
-
-
-## Behavioral design patterns
