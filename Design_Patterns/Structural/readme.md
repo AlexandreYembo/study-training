@@ -12,9 +12,12 @@
   4- Adapter is meant to change the interface of an existing object. Decorator enhances another object without changing its interface. Decorator supports recursive composition, which is not possible when you use Adapter.
   
 *** Remember: Adapter makes two existing interfaces work together as opposed to defining an entirely new one.
+
 #### Bridge, State, Strategy (and to some degree Adapter) 
   1- have very similar structures. 
+  
   2- Indeed, all of these are based on composition, which is delegating work to other objects.
+  
   3- They solve different problems.
 
 ### Bridge
