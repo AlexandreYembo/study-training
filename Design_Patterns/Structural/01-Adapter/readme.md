@@ -35,7 +35,9 @@ https://sourcemaking.com/design_patterns/adapter
  ##### Sometimes it is even possible to create a two-way adapter that can convert the calls in both directions.
  
  ### Structure
-  The implementation uses the composition principle: the adapter implements the interface of one object and wraps the other one.
+ 
+#### Object Adapter
+  This implementation uses the composition principle: the adapter implements the interface of one object and wraps the other one. It can be implemented in all popular programming languages.
   
   You have:
   ```c#
@@ -44,3 +46,6 @@ https://sourcemaking.com/design_patterns/adapter
                                                +ConvertToServiceFormat(data)
                                                +return ServiceMethod(specialData)
 ```
+#### Class Adapter
+    This implementation uses inheritance: the adapter inherits interfaces from both objects at the same time. Note that this approach can only be implemented in programming language that support multiple inheritance.
+    The class adapter does not need to wrap any objects because it inherits behaviors from both the client and the service. The adaptation happens within the overridden methods. The resulting adapter can be used in place of an existing client class.
