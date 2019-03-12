@@ -2,7 +2,7 @@
 
 ## Structural design patterns
 
-### Adapter
+### [Adapter] (https://github.com/AlexandreYembo/study-training/blob/master/Design_Patterns/Structural/01-Adapter/readme.md)
   1- Makes things work after they are designed.
   
   2- Is retrofitted to make unrelated classes work together.
