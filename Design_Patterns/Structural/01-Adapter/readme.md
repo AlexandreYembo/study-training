@@ -47,5 +47,13 @@ https://sourcemaking.com/design_patterns/adapter
                                                +return ServiceMethod(specialData)
 ```
 #### Class Adapter
-    This implementation uses inheritance: the adapter inherits interfaces from both objects at the same time. Note that this approach can only be implemented in programming language that support multiple inheritance.
-    The class adapter does not need to wrap any objects because it inherits behaviors from both the client and the service. The adaptation happens within the overridden methods. The resulting adapter can be used in place of an existing client class.
+   This implementation uses inheritance: the adapter inherits interfaces from both objects at the same time. Note that this approach can only be implemented in programming language that support multiple inheritance.
+   
+   The class adapter does not need to wrap any objects because it inherits behaviors from both the client and the service. The adaptation happens within the overridden methods. The resulting adapter can be used in place of an existing client class.
+   
+#### Pros
+  1- Single Responsability Principle - You can separate the interface or data conversion code.
+  2- Open/Closed Principle - You can introduce new types of adapters into the program without breaking the existing client code.
+
+#### Cons
+  1- The overall complexity of the code increases because you need to introduce a set of new interfaces and classes.
