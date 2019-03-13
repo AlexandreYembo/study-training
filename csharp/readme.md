@@ -32,12 +32,22 @@
 
 
 Heap/Stak
+
 Interface
+
 Abstract class
+
 Func
+
 Action
+
 Compiler, managed assemblit, CLT, JIT Compiler, Machine Code (https://docs.microsoft.com/en-us/dotnet/csharp/getting-started/introduction-to-the-csharp-language-and-the-net-framework)
+
 Threading
+
 Task
+
 Keyword Lock
+
 CurrentBag
+
