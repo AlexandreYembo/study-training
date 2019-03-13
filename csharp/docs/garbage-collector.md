@@ -23,4 +23,11 @@ In CLR the garbage collector is used as an automatic memory manager.
   
   After the Garbage Collector is initialized by the CLR, it allocates a segment of memory to store and manage objects. This memory is called the Managed Heap
 
-#### Performance Analysis Tools
+#### When Garbage collection occurs
+
+#### The Managed heap
+  After the garbage collector is initialized by the CLR, it allocates a segment of memory to store and manage objects. This memory is called the managed heap, as opposed to a native heap in the operating system.
+  
+  1- For each managed process, there is a managed heap. All threads in the processo allocate memory for objects on the same heap.
+  2- When a garbage collection is triggered, the garbage collector reclaims the memory that is occupied by dead objects. The reclaiming process compacts live objects so that they are moved together, and the dead space is removed, thereby making the heap smaller.
+    *** This ensures that objects that are allocated together stay together on the managed heap, to preserve their locality.
