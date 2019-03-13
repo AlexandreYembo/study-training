@@ -1,30 +1,30 @@
 # Advanced topics in C# for interview
 
-1- [C# Fundamentals](https://github.com/AlexandreYembo/study-training/blob/master/csharp/csharp-fundamentals.md) 
+1- [C# Fundamentals](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/csharp-fundamentals.md) 
 
-2- [Iterator Block](https://github.com/AlexandreYembo/study-training/blob/master/csharp/iterator-block.md)
+2- [Iterator Block](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/iterator-block.md)
 
-3- [Generics](https://github.com/AlexandreYembo/study-training/blob/master/csharp/generics.md)
+3- [Generics](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/generics.md)
 
-4- [Delegates](https://github.com/AlexandreYembo/study-training/blob/master/csharp/delegates.md)
+4- [Delegates](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/delegates.md)
 
-5- [Lambda Expressions](https://github.com/AlexandreYembo/study-training/blob/master/csharp/lambda-expressions.md)
+5- [Lambda Expressions](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/lambda-expressions.md)
 
-6- [Events and Delegates](https://github.com/AlexandreYembo/study-training/blob/master/csharp/events_and_delegates.md)
+6- [Events and Delegates](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/events_and_delegates.md)
 
-7- [Extension Methods](https://github.com/AlexandreYembo/study-training/blob/master/csharp/extension-methods.md)
+7- [Extension Methods](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/extension-methods.md)
 
-8- [LINQ](https://github.com/AlexandreYembo/study-training/blob/master/csharp/linq.md)
+8- [LINQ](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/linq.md)
 
-9- [Nullable Types](https://github.com/AlexandreYembo/study-training/blob/master/csharp/nullable-types.md)
+9- [Nullable Types](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/nullable-types.md)
 
-10- [Dynamic](https://github.com/AlexandreYembo/study-training/blob/master/csharp/dynamic.md)
+10- [Dynamic](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/dynamic.md)
 
-11- [Exception Handling](https://github.com/AlexandreYembo/study-training/blob/master/csharp/exception-handling.md)
+11- [Exception Handling](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/exception-handling.md)
 
-12- [Asynchronous Programming with Async / Await](https://github.com/AlexandreYembo/study-training/blob/master/csharp/async-await.md)
+12- [Asynchronous Programming with Async / Await](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/async-await.md)
 
-13- [Garbage collector](https://github.com/AlexandreYembo/study-training/blob/master/csharp/garbage-collector.md)
+13- [Garbage collector](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/garbage-collector.md)
 
 
 [C# 6.0](https://github.com/AlexandreYembo/study-training/blob/master/csharp/C-6-Cheat-Sheet.pdf)
