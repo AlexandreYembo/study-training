@@ -12,6 +12,11 @@
 ### Backend as a Service
 
 ### Function as a Service
+  1- Execute logic in response to events (in this context, all logic including  multiple functions or methods are groupd into a deployable unit, known as a 'Function'
+ 
+ 2- Packaging, deployment, scalling all handled transparently.
+ 
+ 3- Scaling is handled automatically, assuming the function is stateless.
 
 ### Traditional Vs. Serverless Architectures
 
