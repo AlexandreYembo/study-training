@@ -5,7 +5,10 @@
   2- Is a Software Design Pattern where applications are hosted by a third-party service, eliminating the need for server software and hardware management by the developer.
   
   3- Applications are broken up into individual functions that can be invoked and scaled individually.
-  
+ 
+  4- Includes BaaS and FaaS
+ 
+#### About PaaS (Platform as a Service) - still forces the developer to control the number of intances running, this concern is specifically what Serverless removes. 
  
 ## Serverless Definition
 
@@ -42,6 +45,7 @@
 ### Traditional Vs. Serverless Architectures
 
 ### Serverless Offerings
+
 
 #### Cloud Vendors
 
