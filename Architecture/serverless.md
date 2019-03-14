@@ -17,6 +17,20 @@
  2- Packaging, deployment, scalling all handled transparently.
  
  3- Scaling is handled automatically, assuming the function is stateless.
+ 
+ 4-  Scenarios include:
+    
+   - Proxy API credentials: (this would be a good case for when you have some secrets that you do not want to expose on the client side so you can wrap those inside of a fast function.
+    
+   - Database queries: (eg. you want to make a call to Dynamo using a function).
+    
+   - Job dispatching
+    
+   - Domain logic
+ 
+ 5- In all of these, the function is in charge o executing a  task or performing some kind of data extract, transform, load processing.
+ 
+ 6- FaaS makes it easy to write and deploy simple micro-services
 
 ### Traditional Vs. Serverless Architectures
 
