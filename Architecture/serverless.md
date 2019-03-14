@@ -10,6 +10,9 @@
 ## Serverless Definition
 
 ### Backend as a Service
+  1- Are usually priced on storage
+  2- BaaS services may be long-running, but that is an implementation detail of the service provider.
+  
 
 ### Function as a Service
   1- Execute logic in response to events (in this context, all logic including  multiple functions or methods are groupd into a deployable unit, known as a 'Function'
@@ -31,6 +34,10 @@
  5- In all of these, the function is in charge o executing a  task or performing some kind of data extract, transform, load processing.
  
  6- FaaS makes it easy to write and deploy simple micro-services
+ 
+ 7- Are usually priced on time of execution and resource consumption (like allocated RAM)
+ 
+ 8- Usually spin up for the length of the execution and then clean themselves up.
 
 ### Traditional Vs. Serverless Architectures
 
