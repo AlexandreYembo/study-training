@@ -32,6 +32,7 @@ Creational design patterns provide various object creation mechanisms, which inc
    7- You can use along with Bridge. This pairing is useful when some abstractions defined by Bridge can only work with specific implementations. In this case, Abstract Factory can encapsulate there relations and hide the complexity from the client code. 
    
    8- Can be implemented as Singletons.
+   
 ### Builder
    1- Separates object construction from its representation
    
@@ -43,7 +44,8 @@ Creational design patterns provide various object creation mechanisms, which inc
    
    5- You can combine with Bridge: the director class plays the role of the abstraction, while different builders act as implementations.
     
-    6- Can be implemented as Singletons.
+   6- Can be implemented as Singletons.
+    
 ### Factory Method
    1- Creates an instance of several derived classes
     
@@ -54,8 +56,10 @@ Creational design patterns provide various object creation mechanisms, which inc
    4- Is a specialization of Template Method. At the same time, a Factory Method may servce as a step in a large Template Method.
     
    5- Is based on inheritance but doesn’t require an initialization step.
+   
 ### Object Pool
    Avoid expensive acquisition and release of resources by recycling objects that are no longer in use
+   
 ### Prototype
    1- A fully initialized instance to be copied or cloned
    
@@ -70,6 +74,7 @@ Creational design patterns provide various object creation mechanisms, which inc
    6- Sometimes Prototype can be a simpler alternative to (Memento another pattern). This works if the object, the state of which you want to store in the history, is fairly straightforward and doesn’t have links to external resources, or the links are easy to re-establish.
    
    7- Can all be implemented as Singletons.
+   
 ### Singleton
    1- A class of which only a single instance can exist while providing a global access point to this instance.
    
