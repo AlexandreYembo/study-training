@@ -45,9 +45,13 @@
 
 ### Is this Serverless?
   1- Firebase -> Yes, It is a turnkey BaaS provider.
+  
   2- Managed PostgreSQL -> No, the developer is still responsible for scale.
+  
   3- AWS Lambda -> Yes, it is a FaaS provider.
+  
   4- AWS DynamoDB -> Yes, it fits into the BaaS camp, but does not provide all of the APIs that a turnkey BaaS provider has thjis just wraps the database component.
+  
   5- AWS Elastic Beanstalk -> No, it is a PaaS that abstracts the use of underlying IaaS (Infrastructure as a service) services, but the developer is stil responsible for scaling concerns.
 
 ### Traditional Vs. Serverless Architectures
