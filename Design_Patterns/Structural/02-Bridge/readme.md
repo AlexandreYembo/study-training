@@ -110,3 +110,14 @@ Program.cs
         }
     }
 ```
+### Pros
+  1- you can create platform-independent classes and apps.
+  
+  2- The client code works with high-level abstractions. It is not exposed to the platform (implementation) details.
+  
+  3- Open/Close Principle. You can introduce new abstractions and implementations independently from each other.
+  
+  4- Single Responsability Principle. You can focus on hig-level logic in the abstraction and on platform details in the implementation.
+  
+### Cons
+  1- You might make the code more complicated by applying the pattern to a highly cohesive class.
