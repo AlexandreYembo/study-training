@@ -24,6 +24,12 @@
   1- Makes them work before they are.
   
   2- Is designed up-front to let the abstraction and the implementation vary independently. Adapter is commoly used with an existing app to make some otherwise-incompatigle classes work together nicely.
+  
+  3- Used when you want to devide and organize a monolithic class that has several variants of some functionality(eg. if the class can work with various database servers).
+  
+  4- Used when you need to extend a class in several orthogonal (independent) dimensions. The Bridge suggests that you extract a separate class hierarchy for each of the dimensions.
+  
+  5- Used if you need to be able to switch implementations at runtime. Although it is optional, the Bridge patterns lets you replace the implementation object inside the abstraction. It is as easy as assigning a new value to a field.
 
 ### Decorator
   1- Provides an enhanced interface.
