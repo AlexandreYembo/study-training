@@ -30,6 +30,9 @@
   4- Used when you need to extend a class in several orthogonal (independent) dimensions. The Bridge suggests that you extract a separate class hierarchy for each of the dimensions.
   
   5- Used if you need to be able to switch implementations at runtime. Although it is optional, the Bridge patterns lets you replace the implementation object inside the abstraction. It is as easy as assigning a new value to a field.
+  
+  6- You can use Abstract Factory along with Bridge. This pairing is useful when some abstractions defined by Bridge can only work with specific implementations. In this case, Abstract Factory can encapsule the relations and hide the complexity from the client code.
+  7- You can combine Builder with Bridge: the director class plays the role of the abstraction, while different builders act as implementations.
 
 ### Decorator
   1- Provides an enhanced interface.
