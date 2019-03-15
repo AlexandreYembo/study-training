@@ -20,7 +20,7 @@ Following this approach,  we can extract the color-related code into it own clas
   
   
 ### Example implementation
-01 - Define the implementation (interface)
+##### 01 - Define the implementation (interface)
 IImplementation.cs --> The implementation defined the interface for all implementation class. It does not have to match the Abstraction's interface.
 Tipically the implementation interface provides only primitive operations, while the Abstraction defines higher-level operations based on those primitives.
 ```c#
@@ -28,12 +28,29 @@ Tipically the implementation interface provides only primitive operations, while
   {
     string OperationImplementation();
   }
-``
+```
 
-02- Define the concrete Implementation
+##### 02- Define the concretes Implementation
+Each Concrete Implementation corresponds to a specific platform and implements the Implementation interface using that platform's API.
 
+ConcreteImplementationA.cs
+```c#
+  public class ConcreteImplementationA : IImplementation
+  {
+    public string OperationImplementation() => "ConcreteImplementationA: The result in platform A. \n";
+  }
 
+```
 
+ConcreteImplementationB.cs
+```c#
+  public class ConcreteImplementationB : IImplementation
+  {
+    public string OperationImplementation() => "ConcreteImplementationB: The result in platform B. \n";
+  }
+
+```
+##### 03- Define the abstraction class
 Abstraction.cs --> The abstraction defined the interface for the "control" part of the two class hierarchies. It maintains a reference to an object of the Implementation hierarchy and delegates all of the real work to this object.
 ```c#
   public class Abstraction
@@ -49,6 +66,7 @@ Abstraction.cs --> The abstraction defined the interface for the "control" part 
   }
 ```
 
+##### 04- If necessary, define the extended Abstraction
 ExtendedAbstraction.cs --> You can extend the Abstraction without changing the Implementation classes.
 ```c#
   public class ExtendedAbstraction : Abstraction
@@ -58,4 +76,37 @@ ExtendedAbstraction.cs --> You can extend the Abstraction without changing the I
       
       public override string Operation() => "ExtendedAbstract:ion Extended operation with:\n" + _implementation.OperationImplementation();
   }
+```
+
+##### 05- Define the client
+The client code should only depend on the Abstraction class. This way the client mode can support ant abstraction-implementation combination.
+
+Client.cs
+```c#
+    public class Client
+    {
+        public void ClientCode(Abstraction abstraction) => Console.Write(abstraction.Operation);
+    }
+```
+
+Program.cs
+```c#
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+          Client client = new Client();
+          Abstraction abstraction;
+          //The client code should be able to work with any pre-configured
+          //abstraction-implementation combination.
+          
+          //Implement ConcreteImplementationA on Abstraction class.
+          abstraction = new Abstraction(new ConcreteImplementationA());
+          client.ClientCode(abstraction);
+          
+          //Implement ConcreteImplementationB on ExtendedAbstraction class.
+          abstraction = new ExtendedAbstraction(new ConcreteImplementationB());
+          client.ClientCode(abstraction);
+        }
+    }
 ```
