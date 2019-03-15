@@ -20,7 +20,7 @@
   
   3- They solve different problems.
 
-### Bridge
+### [Bridge](https://github.com/AlexandreYembo/study-training/blob/master/Design_Patterns/Structural/02-Bridge/readme.md)
   1- Makes them work before they are.
   
   2- Is designed up-front to let the abstraction and the implementation vary independently. Adapter is commoly used with an existing app to make some otherwise-incompatigle classes work together nicely.
