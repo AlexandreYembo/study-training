@@ -77,3 +77,18 @@ Static data -> Static objects in application domains that could be referencing o
 #### Manipulating unmanaged resources
 If your managed objects reference unmanaged objects by using their native file handles, you have to explicitly free the unmanaged objects, because Garbage collector tracks memory only on the managed heap.
 To perform the cleanup, you can make your managed object finalizable. It consists of cleanup actions that you execute when the object is no longer in use.
+
+#### Concurrent garbage collection
+In workstation or server garbage collection, you can enable concurrent garbage collection, which enables threads to run concurrently with a dedicated thread that performs the garbage collection for most of the duration of the collection.
+
+This option affects only GC in generation 2.
+##### Concurrent happen only in Generation 2. Generation 0 and 1 are always non-concurrent, because theu finish very fast.
+Enable interactive applications to be more responsive by minimizing pauses for a collection.
+##### To improve performance when several processes are running, disable concurrent garbage collection by adding ```<gcConcurrent>``` element to the app's configuration file 
+```XML
+  <gcConcurrent
+   enabled="true|false"/>
+```
+##### Concurrent is performed on a dedicated thread. By default, the CLR runs workstation garbage collection with concurrent ```enabled```.
+
+##### When the concurrent is enabled, GC has a slightly bigger working set (compared with non-concurrent), because you can allocate objects during concurrent collection. However, this can affect performance, because the objects that you allocate become part of your working set.
