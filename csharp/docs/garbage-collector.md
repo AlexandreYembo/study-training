@@ -73,3 +73,7 @@ Garbage collection handles -> Handle that point to managed objects and that can 
 Static data -> Static objects in application domains that could be referencing other objects.
 
 ##### Before a garbage collection starts, all managed threads are suspended except fo the thread that triggered the garbage collection.
+
+#### Manipulating unmanaged resources
+If your managed objects reference unmanaged objects by using their native file handles, you have to explicitly free the unmanaged objects, because Garbage collector tracks memory only on the managed heap.
+To perform the cleanup, you can make your managed object finalizable. It consists of cleanup actions that you execute when the object is no longer in use.
