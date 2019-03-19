@@ -53,3 +53,13 @@ In CLR the garbage collector is used as an automatic memory manager.
 ##### When is detected that the survival rate is high in a generation, it increases the threshold of allocations for that generation.
 
 ##### CLR continually balances 2 priorities: not letting an application's working set get too big and not letting the Garbage Collection take too much time.
+
+##### Large object heap is not compacted. because copying large objects imposes a performance penalty. However, after the .NET Framework 4.5.1 you can use the GC.Settings.LargeObjectHeapCompactionMode property to compact the large object heap on demand.
+```c#
+  [set: System.Security.SecurityCritical]
+  public static System.Runtime.GCLargeObjectHeapCompactionMode LargeObjectHeapCompactionMode { get; set; }
+```
+```c#
+  GCSettings.LargeObjectHeapCompactionMode = GCLargeObjectHeapCompactionMode.CompactOnce;
+  GC.Collect(); 
+```
