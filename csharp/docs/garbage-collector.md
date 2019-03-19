@@ -47,3 +47,9 @@ In CLR the garbage collector is used as an automatic memory manager.
   Generation 2 -> Contains long-lived objects. (eg. object in a server application that contains static data that is live for the duration of the process)
   
 ##### A generation 2, garbage collection is also known as a full garbage collection, because it reclaims all object in all generations (that is, all objects in the managed heap).
+
+##### Survival and promotions -> Objects that are not reclaimed in a garbage collection are known as Survivor and are promoted to the next generation.
+##### Object that survive a generation 0 are promoted to generation 1 and so on. Objects that survive a generation 2 remain in generation 2.
+##### When is detected that the survival rate is high in a generation, it increases the threshold of allocations for that generation.
+
+##### CLR continually balances 2 priorities: not letting an application's working set get too big and not letting the Garbage Collection take too much time.
