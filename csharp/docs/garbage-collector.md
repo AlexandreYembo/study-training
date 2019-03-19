@@ -1,4 +1,6 @@
 # Garbage Collector
+Link reference: https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/fundamentals
+
 In CLR the garbage collector is used as an automatic memory manager.
 
 ### Benefits
@@ -63,3 +65,11 @@ In CLR the garbage collector is used as an automatic memory manager.
   GCSettings.LargeObjectHeapCompactionMode = GCLargeObjectHeapCompactionMode.CompactOnce;
   GC.Collect(); 
 ```
+#### Innformation used by Garbage Collector to determine whether object are live
+Stack root -> Stack variables provided by just-in-time(JIT) compiler and stack walker.
+
+Garbage collection handles -> Handle that point to managed objects and that can be allocated by user code or by the CLR.
+
+Static data -> Static objects in application domains that could be referencing other objects.
+
+##### Before a garbage collection starts, all managed threads are suspended except fo the thread that triggered the garbage collection.
