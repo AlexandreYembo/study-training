@@ -35,6 +35,10 @@
   
   7- You can combine Builder with Bridge: the director class plays the role of the abstraction, while different builders act as implementations.
 
+### [Composite](https://github.com/AlexandreYembo/study-training/blob/master/Design_Patterns/Structural/03-Composite/readme.md)
+  1- 
+
+
 ### Decorator
   1- Provides an enhanced interface.
   
