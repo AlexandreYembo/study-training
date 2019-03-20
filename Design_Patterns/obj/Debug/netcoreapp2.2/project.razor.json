@@ -1,6 +1,14 @@
 {
-  "ProjectFilePath": "/home/alexandre/Projects/My Git Repository/study-training/Design_Patterns/Design_Patterns.csproj",
+  "ProjectFilePath": "c:\\Git_Repositories\\study-training\\Design_Patterns\\Design_Patterns.csproj",
   "TargetFramework": "netcoreapp2.2",
   "TagHelpers": [],
-  "Configuration": null
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
 }
