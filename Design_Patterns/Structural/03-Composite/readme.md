@@ -22,3 +22,12 @@ This pattern suggests that you with Products and Boxes through a common interfac
 This pattern lets you run a behavior recursively over all components of an object tree.
 
 The greatest benefit you don't need to care about the concrete classes of objects that compose the tree. You don't need to know whether an object is a simple product or a sophisticated box. You can treat them all the same by using common interface.
+
+### Applicability
+##### 1- Use this pattern when you have to implement a tree-like object structure.
+ 
+   You can have a simple leaves and complex containers.
+ 
+   A container can be composed of both leves and other containers. This lets you construct a nested recursive object structure. 
+ 
+#####  2- Use this pattern when you want the client code to treat both simple and complex elements uniformly.
