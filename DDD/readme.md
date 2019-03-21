@@ -20,3 +20,9 @@ A domain model is not particular diagram; it is the idea that the diagram is int
 In the old Waterfall method the business experts talk to the analyst and the analyst have full responsibility to create the model and pass to the developer. They have no opportunity to learn from the Developer or gaim experience with ealy versions of software.
 
 If the developers are not interested in the domain, they learn only what the application should do, not the principle behind it.
+
+Business activities and rules are as central to a domain as are the entities envolved.\
+
+#### LAYERED ARCHITECTURE -> Guid us to move the specifc rule into a domain object.
+
+#### POLICY -> Is another name for the design pattern known as STRATEGY. It is usually motivated by the need to substitute different rules.
