@@ -37,11 +37,17 @@
 
 ### [Composite](https://github.com/AlexandreYembo/study-training/blob/master/Design_Patterns/Structural/03-Composite/readme.md)
   1- You can use Builder when creating complex Composite trees because you can program its construction steps to work recursively.
+  
   2- Chain of responsability is often used in conjunction with Composite. In this case, when a leaf component gets a request, it may pass it through the chain of all of the parent components down to the root of the object tree.
+  
   3- You can use Iterators to traverse Composite trees.
+  
   4- You can use Visitor to execute an operation over an entire Composite tree.
+  
   5- You can implement shared leaf nodes of the Composite tree as Flyweights to save some RAM.
+  
   6- Has a similar structure diagrams of Decorator, since both rely on recursive composition to organize an open-ended number of objects.
+  
   7- Decorator can cooperate extending the behavior of a specific object in the composite tree.
   
   8- Designs that make heavy use of Composite and Decorator can often benefit from using Prototype. Applying the pattern lets you clone complex structures instead of re-constructing them from scratch.
