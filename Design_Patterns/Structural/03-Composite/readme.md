@@ -49,6 +49,9 @@ The greatest benefit you don't need to care about the concrete classes of object
 ```
 
 ### Pros
-
+  1- You can work with complex tree structures by using polymorphism and recursion.
+  
+  2- Open/Close Principle. You can introduce new element types into the app without breaking the existing code, which now works with the object tree.
 
 ### Cons
+  1- It might be difficult to provide a common interface for classes whose functionality differs too much. In certain scenarios, you'd need to overgeneralize the component interface, making it harder to comprehend.
