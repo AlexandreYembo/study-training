@@ -44,7 +44,8 @@ By declaring unsafe in the field.
   
   3- It is your responsability to ensure that your code does not introduce security risk or pointer errors.
   
-```To set this compiler option in the Visual Studio development environment
+#### To set this compiler option in the Visual Studio development environment
+```
   1- Open the project's Properties page.
   2- Click the Build property page.
   3- Select the Allow Unsafe Code check box.```
