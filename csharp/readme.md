@@ -26,6 +26,7 @@
 
 13- [Garbage collector](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/garbage-collector.md)
 
+14- [Threading](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/threading.md)
 
 [C# 6.0](https://github.com/AlexandreYembo/study-training/blob/master/csharp/C-6-Cheat-Sheet.pdf)
 
@@ -43,7 +44,7 @@ Action
 
 Compiler, managed assemblit, CLT, JIT Compiler, Machine Code (https://docs.microsoft.com/en-us/dotnet/csharp/getting-started/introduction-to-the-csharp-language-and-the-net-framework)
 
-Threading
+
 
 Task
 
