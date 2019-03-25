@@ -28,7 +28,9 @@
 
 14- [Threading](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/threading.md)
 
-15- [Unsafe Code](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/unsafe-code.md)
+15- [Task](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/task.md)
+
+16- [Unsafe Code](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/unsafe-code.md)
 
 [C# 6.0](https://github.com/AlexandreYembo/study-training/blob/master/csharp/C-6-Cheat-Sheet.pdf)
 
