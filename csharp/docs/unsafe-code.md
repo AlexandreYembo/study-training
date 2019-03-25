@@ -48,4 +48,5 @@ By declaring unsafe in the field.
 ```
   1- Open the project's Properties page.
   2- Click the Build property page.
-  3- Select the Allow Unsafe Code check box.```
+  3- Select the Allow Unsafe Code check box.
+```
