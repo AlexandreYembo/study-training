@@ -1,15 +1,15 @@
 # Unsafe Codes
   c# allows using pointer variable in a function of code block when it is marked by the ```unsafe``` modifier.
   
-    1- Methods, types and code blocks can be defined as unsafe.
+   1- Methods, types and code blocks can be defined as unsafe.
     
-    2- In some cases, unsafe code may increase an application's performance by removing array bound checks.
+   2- In some cases, unsafe code may increase an application's performance by removing array bound checks.
     
-    3- Unsafe code is required when you call native functions that require pointers.
+   3- Unsafe code is required when you call native functions that require pointers.
     
-    4- Using unsafe code introduces security and stability risks.
+   4- Using unsafe code introduces security and stability risks.
     
-    5- In order for C# to compile unsafe code, the application must be compiled  with /unsafe (compiler option).
+   5- In order for C# to compile unsafe code, the application must be compiled  with /unsafe (compiler option).
   ```c#
       static unsafe void Main(string[] args) {
              int var = 20;
