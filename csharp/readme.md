@@ -49,9 +49,6 @@ Action
 Compiler, managed assemblit, CLT, JIT Compiler, Machine Code (https://docs.microsoft.com/en-us/dotnet/csharp/getting-started/introduction-to-the-csharp-language-and-the-net-framework)
 
 
-
-Task
-
 Keyword Lock
 
 CurrentBag
