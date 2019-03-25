@@ -40,10 +40,10 @@ Starts when an object of the System.Threading.Thread class is created and ends w
     -> Due to I/O request.
     
     -> Suspend() method is called.
-    ```c#
+```c#
       // thr1 is in suspended state 
       thr1.Suspend(); 
-    ```
+```
     
   
   ``` Dead State ``` -> When the thread completes its task, then thread enters into dead, terminates, abort state.
