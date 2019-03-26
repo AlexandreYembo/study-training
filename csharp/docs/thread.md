@@ -1,4 +1,4 @@
-# Threading
+# Thread
   1- It is a process.
   
   2- Each thread defines a unique flow of control.
