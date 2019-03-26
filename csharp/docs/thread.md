@@ -38,7 +38,7 @@ Starts when an object of the System.Threading.Thread class is created and ends w
     -> Wait() method is called.
     
     -> Due to I/O request.
-    
+     
     -> Suspend() method is called.
 ```c#
       // thr1 is in suspended state 
