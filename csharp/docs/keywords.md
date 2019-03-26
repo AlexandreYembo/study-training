@@ -3,7 +3,9 @@ More about Keywords:
 https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/index
 
 ## Implicit
-Is used to declare an implicit user-defined type conversion operator. Use it to enable implicit conversions between a user-defined type and another type, if the conversion is guaranteed not to cause a loss of datat.
+Is used to declare an implicit user-defined type conversion operator. Use it to enable implicit conversions between a user-defined type and another type, if the conversion is guaranteed not to cause a loss of data.
+https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/operator
+
 ```c#
   class Digit
 {
