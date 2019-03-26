@@ -5,11 +5,19 @@ https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/index
 ## Implicit
 Is used to declare an implicit user-defined type conversion operator. Use it to enable implicit conversions between a user-defined type and another type, if the conversion is guaranteed not to cause a loss of datat.
 ```c#
-  //User-defined conversion from Digit to double
-  public static implicit operator double(Digit d) => d.val;
-  
-  //User-defined conversion from double to Digit
-  public static implicit operator Digit(double d) => new Digit(d);
+  class Digit
+{
+    public Digit(double d) { val = d; }
+    public double val;
+    // ...other members
+
+    // User-defined conversion from Digit to double
+    public static implicit operator double(Digit d) => d.val;
+    
+    //  User-defined conversion from double to Digit
+    public static implicit operator Digit(double d) => new Digit(d);
+    }
+}
 
   //implementation
     Digit dig = new Digit(7);
