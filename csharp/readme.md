@@ -26,7 +26,7 @@
 
 13- [Garbage collector](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/garbage-collector.md)
 
-14- [Threading](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/threading.md)
+14- [Thread](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/thread.md)
 
 15- [Task](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/task.md)
 
