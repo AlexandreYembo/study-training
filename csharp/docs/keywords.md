@@ -29,7 +29,8 @@ Is used to declare an implicit user-defined type conversion operator. Use it to 
 ```
 ## Operator
 https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/operator
-Use the ```oeprator``` keyword to overload a built-in operator or to provide a user-defined conversion in a class or struct declaration.
+
+Use the ```operator``` keyword to overload a built-in operator or to provide a user-defined conversion in a class or struct declaration.
 ```c#
 class Fraction
 {
