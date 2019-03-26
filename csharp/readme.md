@@ -32,6 +32,9 @@
 
 16- [Unsafe Code](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/unsafe-code.md)
 
+
+[Keywords](https://github.com/AlexandreYembo/study-training/blob/master/csharp/docs/keywords.md)
+
 [C# 6.0](https://github.com/AlexandreYembo/study-training/blob/master/csharp/C-6-Cheat-Sheet.pdf)
 
 
