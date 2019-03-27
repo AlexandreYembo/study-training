@@ -19,3 +19,6 @@ Extending a class in the first thing.
 #### Composition is the key principle behind many design patterns, including the Decorator.
 
 #### ```Wrapper``` is the alternative nickname for the Decorator.
+
+
+### Structure
