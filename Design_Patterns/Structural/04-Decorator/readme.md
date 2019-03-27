@@ -22,3 +22,14 @@ Extending a class in the first thing.
 
 
 ### Structure
+  1- Component(common interface for both wrappers and wrapped objects).
+  
+  2- Concrete Component - class of objects being wrapped. Basic behavior.
+  
+  3- Base Decorator - has a field for referencing a wrapped object. By using the component interface it can contain both concrete components and decorators.
+  
+  4- Concrete Decorators - Define extra behaviors that can be added to components dynamically. It overrides methods of the base decorator or after calling the parent method.
+  
+  5- Client - Can wrap components in multiple layers of decorators via the component interface.
+  
+  ### Why to apply?
