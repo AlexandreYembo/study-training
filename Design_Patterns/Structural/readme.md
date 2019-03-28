@@ -46,11 +46,11 @@
   
   5- You can implement shared leaf nodes of the Composite tree as Flyweights to save some RAM.
   
-  6- Has a similar structure diagrams of Decorator, since both rely on recursive composition to organize an open-ended number of objects.
+  6- Has a similar structure diagrams of ```Decorator```, since both rely on recursive composition to organize an open-ended number of objects.
   
   7- Decorator can cooperate extending the behavior of a specific object in the composite tree.
   
-  8- Designs that make heavy use of Composite and Decorator can often benefit from using Prototype. Applying the pattern lets you clone complex structures instead of re-constructing them from scratch.
+  8- Designs that make heavy use of ```Composite``` and ```Decorator``` can often benefit from using Prototype. Applying the pattern lets you clone complex structures instead of re-constructing them from scratch.
  
 ### [Decorator](https://github.com/AlexandreYembo/study-training/blob/master/Design_Patterns/Structural/04-Decorator/readme.md)
   1- Provides an enhanced interface.
@@ -65,10 +65,19 @@
   
   6- Adds additional responsabilities to the wrapped object. Composite just "sums up" its children's result.
   
-  7- ```Chain of Responsibility``` and Decorator have similar class structures. Both rely on recursive composition to pass
+  7- ```Chain of Responsibility``` and Decorator have similar class structures. Both rely on recursive composition to pass the execution through a series of objects. However, there are several crucial differences:
+   CoR -> can execute arbitrary operations independently of each other. They can also stop passing the request further at any point
+    
+   Decorator -> Are not allowed to break the flow of the request.
+   
+   8- Is like ```Composite``` but only has one child component and another difference is Decorator adds additional responsebilities to the wrapped object while ```Composite``` just 'Sums up' it children's result.
+   
+   9- Designs that make heavy use of ```Composite``` and ```Decorator``` can often benefit from using Prototype. Applying the pattern lets you clone complex structures instead of re-constructing them from scratch.
+   
+   10- Let you change the skin of an object, while ```strategy``` lets you change the guts.
+   
+   11- Have the similar structure with ```Proxy```. Both are built on the composition principle. But ```Proxy``` usually manages the life cycle of its service object on its own, whereas the composition of ```Decorators``` is always controlled by the client.
   
-  
-
 ### Facade
   1- Defines a new interface of an existing, whereas Adapter reuses an old interface. Adapter usually wraps just one object, while Facade works with an entire subsystem of objects.
 
