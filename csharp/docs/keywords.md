@@ -86,6 +86,10 @@ Prevents the garbage collector from relocating a movable variable. It only permi
 
   // The following assignment initializes p by using a string.
   fixed (char* p = str) { /*...*/ }
+  
+  // The following assignment is not valid, because str[0] is a char, 
+  // which is a value, not a variable.
+  //fixed (char* p = &str[0]) { /*...*/ } 
 ```
 
 ## Lock statement
