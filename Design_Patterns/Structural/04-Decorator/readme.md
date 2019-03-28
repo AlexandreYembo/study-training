@@ -32,7 +32,24 @@ Extending a class in the first thing.
   
   5- Client - Can wrap components in multiple layers of decorators via the component interface.
   
-  ### Why to apply?
+### Why to apply?
   1- Used when you need to be able to assign extra behaviors to objects at runtime without breaking the code that uses the objects.
   
   2- When it's awkward or not possible to extend an object's behavior using inheritance.
+
+
+### Pros
+  1- You can extend an object's behavior without making a new subclass.
+  
+  2- You can add or remove responsibilities from an object at runtime.
+  
+  3- You can combine several behaviors by wrapping an object into multiple decorators.
+  
+  4- ```Single Resposability Principle```. You can divide a monolithic class that implements many possible variants of behavior into several smaller classes.
+
+### Cons
+  1- It's hard to remove a specific wrapper from the wrappers stack.
+  
+  2- It's hard to implement a decorator in such a way that its behavior does not depend on the order in the decorators stack.
+  
+  3- The initial configuration code of layers might look pretty ugly.
