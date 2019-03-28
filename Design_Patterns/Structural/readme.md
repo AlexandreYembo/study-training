@@ -7,9 +7,9 @@
   
   2- Is retrofitted to make unrelated classes work together.
   
-  3- Provides a different interface to the wrapped object. Proxy provides the same interface. Decorator provides an enhanced interface.
+  3- Provides a different interface to the wrapped object. ```Proxy``` provides the same interface. ```Decorator``` provides an enhanced interface.
   
-  4- Adapter is meant to change the interface of an existing object. Decorator enhances another object without changing its interface. Decorator supports recursive composition, which is not possible when you use Adapter.
+  4- Adapter is meant to change the interface of an existing object. ```Decorator``` enhances another object without changing its interface. ```Decorator``` supports recursive composition, which is not possible when you use Adapter.
   
 *** Remember: Adapter makes two existing interfaces work together as opposed to defining an entirely new one.
 
@@ -52,7 +52,7 @@
   
   8- Designs that make heavy use of Composite and Decorator can often benefit from using Prototype. Applying the pattern lets you clone complex structures instead of re-constructing them from scratch.
  
-### Decorator
+### [Decorator](https://github.com/AlexandreYembo/study-training/blob/master/Design_Patterns/Structural/04-Decorator/readme.md)
   1- Provides an enhanced interface.
   
   2- Decorator enhances another object without changing its interface.
@@ -64,6 +64,8 @@
   5- Is like a Composite but has only one child component.
   
   6- Adds additional responsabilities to the wrapped object. Composite just "sums up" its children's result.
+  
+  7- ```Chain of Responsibility``` and Decorator have similar class structures. Both rely on recursive composition to pass
   
   
 
