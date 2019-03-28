@@ -45,7 +45,7 @@ Extending a class in the first thing.
   
   3- You can combine several behaviors by wrapping an object into multiple decorators.
   
-  4- ```Single Resposability Principle```. You can divide a monolithic class that implements many possible variants of behavior into several smaller classes.
+  4- ```Single Resposibility Principle```. You can divide a monolithic class that implements many possible variants of behavior into several smaller classes.
 
 ### Cons
   1- It's hard to remove a specific wrapper from the wrappers stack.
