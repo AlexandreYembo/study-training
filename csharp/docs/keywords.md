@@ -3,7 +3,12 @@ More about Keywords:
 https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/index
 
 ## Implicit
-Is used to declare an implicit user-defined type conversion operator. Use it to enable implicit conversions between a user-defined type and another type, if the conversion is guaranteed not to cause a loss of data.
+https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/implicit
+
+1- Is used to declare an implicit user-defined type conversion operator. Use it to enable implicit conversions between a user-defined type and another type, if the conversion is guaranteed not to cause a loss of data.
+
+2- By eliminating unnecessary casts, implicit conversions can improve source code readability.
+
 ```c#
   class Digit
 {
@@ -50,3 +55,38 @@ class Fraction
 }
 
 ```
+
+### Fixed Statement
+https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/fixed-statement
+
+Prevents the garbage collector from relocating a movable variable. It only permitted in an ```unsafe``` context.
+```c#
+  class Point
+  {
+    public int x, y;
+  }
+  
+  unsafe private static void ModifyFixedStorage()
+  {
+      Point pt = new Point();
+      
+      fixed(int* p = &pt.x)
+      {
+          *p = 1;
+      }
+  }
+```
+
+```c#
+  // You can initialize a pointer by using an array.
+  fixed (double* p = arr) { /*...*/ }
+
+  // You can initialize a pointer by using the address of a variable. 
+  fixed (double* p = &arr[0]) { /*...*/ }
+
+  // The following assignment initializes p by using a string.
+  fixed (char* p = str) { /*...*/ }
+```
+
+## Lock statement
+  1- Acquires
