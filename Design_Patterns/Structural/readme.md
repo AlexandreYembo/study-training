@@ -66,6 +66,7 @@
   6- Adds additional responsabilities to the wrapped object. Composite just "sums up" its children's result.
   
   7- ```Chain of Responsibility``` and Decorator have similar class structures. Both rely on recursive composition to pass the execution through a series of objects. However, there are several crucial differences:
+  
    CoR -> can execute arbitrary operations independently of each other. They can also stop passing the request further at any point
     
    Decorator -> Are not allowed to break the flow of the request.
