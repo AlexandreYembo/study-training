@@ -33,3 +33,6 @@ Extending a class in the first thing.
   5- Client - Can wrap components in multiple layers of decorators via the component interface.
   
   ### Why to apply?
+  1- Used when you need to be able to assign extra behaviors to objects at runtime without breaking the code that uses the objects.
+  
+  2- When it's awkward or not possible to extend an object's behavior using inheritance.
