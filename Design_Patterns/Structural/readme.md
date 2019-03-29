@@ -79,7 +79,7 @@
    
    11- Have the similar structure with ```Proxy```. Both are built on the composition principle. But ```Proxy``` usually manages the life cycle of its service object on its own, whereas the composition of ```Decorators``` is always controlled by the client.
   
-### Facade
+### [Facade](https://github.com/AlexandreYembo/study-training/blob/master/Design_Patterns/Structural/05-Facade/readme.md)
   1- Defines a new interface of an existing, whereas Adapter reuses an old interface. Adapter usually wraps just one object, while Facade works with an entire subsystem of objects.
 
 ### Proxy
