@@ -53,6 +53,14 @@
   4- AWS DynamoDB -> Yes, it fits into the BaaS camp, but does not provide all of the APIs that a turnkey BaaS provider has thjis just wraps the database component.
   
   5- AWS Elastic Beanstalk -> No, it is a PaaS that abstracts the use of underlying IaaS (Infrastructure as a service) services, but the developer is stil responsible for scaling concerns.
+
+### Traditional Vs. Serverless Architectures
+
+### Serverless Offerings
+#### Backend as a Service
+  1- Google Firebase
+  
+  2- AWS API Gateway
   
 ### API Gateway
   1- Thin layer of infrastructure that handles cross-cutting concerns:
@@ -65,11 +73,28 @@
     
     - Basic Caching
   
-  2- Is considered serverless because it does not require the developer to be concerned with scale and maintenance.
+  2- Is considered serverless because it does not require the developer to be concerned with scale and maintenance.dddf
 
-### Traditional Vs. Serverless Architectures
+### AWS Lambda
+Possible integrations:
+  
+  1- Triggers (API Gateway, AWS IoT, Alexa, CloudWatch, CodeCommit, Cognito, DynamoDB, Kinesis, S3, SNS)
+  
+  2- All triggers to Lambda come from another AWS entry point.
+  
+  3- This could cause concerns about vendor lock-in.
+  
+  
+#### Function as a Service
+  1- AWS Lambda
+  
+  2- Azure Functions
+  
+  3- IBM Bluemix OpenWhisk
+  
+#### On-Premise
+  1- Parse
 
-### Serverless Offerings
 
 
 #### Cloud Vendors
