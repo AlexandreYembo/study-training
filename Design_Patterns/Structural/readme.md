@@ -96,6 +96,8 @@
  
  6- Similar to ```Proxy``` in that both buffer a complex entity and initialize it on its own. Unlike ```Facade```, ```Proxy``` has the same interface as its servicee object, which makes them interchangeable.
 
+#### [Implementation](https://github.com/AlexandreYembo/study-training/blob/master/Design_Patterns/Structural/05-Facade/implementation.md)
+
 ### Proxy
   1- Provides the same interface. Adapter provides a different interface to its subject. Decorator provides an enhanced interface.
 
