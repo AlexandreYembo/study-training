@@ -74,6 +74,13 @@
     - Basic Caching
   
   2- Is considered serverless because it does not require the developer to be concerned with scale and maintenance.dddf
+  
+#### Function as a Service
+  1- AWS Lambda
+  
+  2- Azure Functions
+  
+  3- IBM Bluemix OpenWhisk
 
 ### AWS Lambda
 Possible integrations:
@@ -83,15 +90,18 @@ Possible integrations:
   2- All triggers to Lambda come from another AWS entry point.
   
   3- This could cause concerns about vendor lock-in.
+
+### Azure Functions
+Possible intergrations:
+  1- HTTP + Webhook
   
+  2- Event processing
   
-#### Function as a Service
-  1- AWS Lambda
+  3- Timer-based processing
   
-  2- Azure Functions
-  
-  3- IBM Bluemix OpenWhisk
-  
+  4- Steam Analytics
+
+
 #### On-Premise
   1- Parse
 
