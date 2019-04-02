@@ -53,6 +53,19 @@
   4- AWS DynamoDB -> Yes, it fits into the BaaS camp, but does not provide all of the APIs that a turnkey BaaS provider has thjis just wraps the database component.
   
   5- AWS Elastic Beanstalk -> No, it is a PaaS that abstracts the use of underlying IaaS (Infrastructure as a service) services, but the developer is stil responsible for scaling concerns.
+  
+### API Gateway
+  1- Thin layer of infrastructure that handles cross-cutting concerns:
+    
+    - Key Management
+    
+    - Rooute Definition
+    
+    - Request Throttling (Throttling is the process of limiting the number of requests you (or your authorized developer) can submit to a given operation in a given amount of time)
+    
+    - Basic Caching
+  
+  2- Is considered serverless because it does not require the developer to be concerned with scale and maintenance.
 
 ### Traditional Vs. Serverless Architectures
 
