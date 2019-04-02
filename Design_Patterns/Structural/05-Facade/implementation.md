@@ -64,7 +64,7 @@
 ```c#
     public class Program
     {
-        static void Main(stringp[] args){
+        static void Main(string[] args){
           SubSystem1 subSystem1 = new SubSystem1();
           SubSystem2 subSystem2 = new SubSystem2();
           
