@@ -85,6 +85,7 @@
 ### AWS Lambda
 Possible integrations:
   
+  
   1- Triggers (API Gateway, AWS IoT, Alexa, CloudWatch, CodeCommit, Cognito, DynamoDB, Kinesis, S3, SNS)
   
   2- All triggers to Lambda come from another AWS entry point.
