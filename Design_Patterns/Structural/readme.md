@@ -81,6 +81,20 @@
   
 ### [Facade](https://github.com/AlexandreYembo/study-training/blob/master/Design_Patterns/Structural/05-Facade/readme.md)
   1- Defines a new interface of an existing, whereas Adapter reuses an old interface. Adapter usually wraps just one object, while Facade works with an entire subsystem of objects.
+  
+  2- ```Abstract Factory``` can serve as an alternative when you only want to hide the way the subsystem objects are created from the client code.
+  
+  3- ```Flyweight``` shows how to make lots of little objects, whereas ```Facade``` shows how to make a single object that represents an entire subsystem.
+  
+  4- ```Mediator``` have similar jobs:
+    
+   - Facade defines a simplified interface, but it does not introduce any new functionality. The subsystem itself is unaware of the facade.
+   
+   - Mediator: centralizes communication between components of the system, The components only know about the mediator object and don't communicate directly.
+   
+ 5- Can often be transformed into a ```Singleton``` since a single facade object is sufficient in most cases.
+ 
+ 6- Similar to ```Proxy``` in that both buffer a complex entity and initialize it on its own. Unlike ```Facade```, ```Proxy``` has the same interface as its servicee object, which makes them interchangeable.
 
 ### Proxy
   1- Provides the same interface. Adapter provides a different interface to its subject. Decorator provides an enhanced interface.
