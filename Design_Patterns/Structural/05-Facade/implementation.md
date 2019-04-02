@@ -1,5 +1,7 @@
 # Implementation in C#
 Link reference: https://refactoring.guru/design-patterns/facade/csharp/example
+
+### Facade class
 ```c#
   public class Facade
   {
