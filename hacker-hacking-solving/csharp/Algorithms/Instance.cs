@@ -1,20 +1,14 @@
+using System;
 using System.Collections.Generic;
 
 namespace hackerrank{
 public static class Instance {
         #region Factory
-
-        private static readonly IDictionary<Actions, ICode> INSTANCE = new Dictionary<Actions, ICode>
-        {
-            {Actions.SolveMeFirst, new SolveMeFirst()},
-            {Actions.DiagonalDifference, new DiagonalDifference()},
-            {Actions.PlusMinus, new PlusMinus()},
-        };
-
-        private static ICode GetInstance(this Actions action) => INSTANCE.ContainsKey(action) ? INSTANCE[action] : null;
+        //Create instance for a specific class defined on input of the program.
+        private static ICode GetInstance(this string objTypeName) => (ICode) Activator.CreateInstance(Type.GetType("hackerrank." + objTypeName));
 
         #endregion
 
-        public static void Run(Actions action) => GetInstance(action).Run();
+        public static void Run(string action) => GetInstance(action).Run();
     }
 }
