@@ -8,6 +8,7 @@ public static class Instance {
         {
             {Actions.SolveMeFirst, new SolveMeFirst()},
             {Actions.DiagonalDifference, new DiagonalDifference()},
+            {Actions.PlusMinus, new PlusMinus()},
         };
 
         private static ICode GetInstance(this Actions action) => INSTANCE.ContainsKey(action) ? INSTANCE[action] : null;

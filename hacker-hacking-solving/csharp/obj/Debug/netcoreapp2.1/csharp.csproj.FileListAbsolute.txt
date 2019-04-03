@@ -9,3 +9,14 @@ C:\GitRepository\hacker-hank-training\csharp\bin\Debug\netcoreapp2.1\csharp.dll
 C:\GitRepository\hacker-hank-training\csharp\bin\Debug\netcoreapp2.1\csharp.pdb
 C:\GitRepository\hacker-hank-training\csharp\obj\Debug\netcoreapp2.1\csharp.dll
 C:\GitRepository\hacker-hank-training\csharp\obj\Debug\netcoreapp2.1\csharp.pdb
+C:\Git_Repositories\study-training\hacker-hacking-solving\csharp\bin\Debug\netcoreapp2.1\csharp.deps.json
+C:\Git_Repositories\study-training\hacker-hacking-solving\csharp\bin\Debug\netcoreapp2.1\csharp.runtimeconfig.json
+C:\Git_Repositories\study-training\hacker-hacking-solving\csharp\bin\Debug\netcoreapp2.1\csharp.runtimeconfig.dev.json
+c:\Git_Repositories\study-training\hacker-hacking-solving\csharp\bin\Debug\netcoreapp2.1\csharp.dll
+c:\Git_Repositories\study-training\hacker-hacking-solving\csharp\bin\Debug\netcoreapp2.1\csharp.pdb
+c:\Git_Repositories\study-training\hacker-hacking-solving\csharp\obj\Debug\netcoreapp2.1\csharp.csprojAssemblyReference.cache
+c:\Git_Repositories\study-training\hacker-hacking-solving\csharp\obj\Debug\netcoreapp2.1\csharp.csproj.CoreCompileInputs.cache
+c:\Git_Repositories\study-training\hacker-hacking-solving\csharp\obj\Debug\netcoreapp2.1\csharp.AssemblyInfoInputs.cache
+c:\Git_Repositories\study-training\hacker-hacking-solving\csharp\obj\Debug\netcoreapp2.1\csharp.AssemblyInfo.cs
+c:\Git_Repositories\study-training\hacker-hacking-solving\csharp\obj\Debug\netcoreapp2.1\csharp.dll
+c:\Git_Repositories\study-training\hacker-hacking-solving\csharp\obj\Debug\netcoreapp2.1\csharp.pdb
