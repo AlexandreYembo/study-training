@@ -18,3 +18,10 @@ The proxy disguises itself as a database object. It can handle lazy initializati
 If you need to execute something either before or after the primary logic of the class, the proxy lets you do this without changing that class. Since the proxy implements the same interface as the original class, it can be passed to any client that expects a real service object.
 
 ### Structure
+1- ```Service interface``` -> Declares the interface of the Service and Proxy must follow this.
+
+2- The ```Service``` -> is a class that provides some useful business logic.
+
+3- The ```Proxy``` -> has a reference field that points to a service object. After finishes its processing it passes the requests to the service object.
+
+4- ``` The Client``` -> should work with bother services and proxies using the same interface.
