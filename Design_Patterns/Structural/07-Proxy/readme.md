@@ -25,3 +25,4 @@ If you need to execute something either before or after the primary logic of the
 3- The ```Proxy``` -> has a reference field that points to a service object. After finishes its processing it passes the requests to the service object.
 
 4- ``` The Client``` -> should work with bother services and proxies using the same interface.
+ 
