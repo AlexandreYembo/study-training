@@ -98,7 +98,7 @@
 
 #### [Implementation](https://github.com/AlexandreYembo/study-training/blob/master/Design_Patterns/Structural/05-Facade/implementation.md)
 
-### Proxy
+### [Proxy](https://github.com/AlexandreYembo/study-training/blob/master/Design_Patterns/Structural/07-Proxy/readme.md)
   1- Provides the same interface. Adapter provides a different interface to its subject. Decorator provides an enhanced interface.
 
 
