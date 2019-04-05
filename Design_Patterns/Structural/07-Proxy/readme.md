@@ -26,3 +26,9 @@ If you need to execute something either before or after the primary logic of the
 
 4- ``` The Client``` -> should work with bother services and proxies using the same interface.
  
+### Applicability
+1- Lazy initialization (virtual proxy)
+
+2- Local execution of a remote service (remove proxy). This is when the service object is located on a remote server.
+
+3- Caching request result (caching proxy).
