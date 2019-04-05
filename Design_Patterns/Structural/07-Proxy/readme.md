@@ -35,4 +35,18 @@ If you need to execute something either before or after the primary logic of the
 
 4- Logging requests (logging proxy). Whe you want to keep a history of requests to the service object.
 
-3- Caching request result (caching proxy). Cache results of client request and manage the life cycle of this cache.
+5- Caching request result (caching proxy). Cache results of client request and manage the life cycle of this cache.
+
+### Pros
+1- You can control the service object without clients knowing about it.
+
+2- You can manage the lifecycle of the service object when clients don't care about it.
+
+3- The Proxy works even if the service object is not ready or is not available.
+
+4- Open/Closed Principle. You can introduce new proxies without changing the service or clients.
+
+### Cons
+1- The code may become more complicated since you need to introduce a lot of new classes.
+
+2- The response from the service might get delayed.
