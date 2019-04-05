@@ -29,6 +29,10 @@ If you need to execute something either before or after the primary logic of the
 ### Applicability
 1- Lazy initialization (virtual proxy)
 
-2- Local execution of a remote service (remove proxy). This is when the service object is located on a remote server.
+2- Access Control (protection proxy). Specific clients are able to use the service object.
 
-3- Caching request result (caching proxy).
+3- Local execution of a remote service (remove proxy). This is when the service object is located on a remote server.
+
+4- Logging requests (logging proxy). Whe you want to keep a history of requests to the service object.
+
+3- Caching request result (caching proxy). Cache results of client request and manage the life cycle of this cache.
