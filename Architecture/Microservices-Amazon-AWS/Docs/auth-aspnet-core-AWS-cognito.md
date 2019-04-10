@@ -57,3 +57,28 @@ e) Go to App clients and client on ```Add an app client```
   b) Click on ```Create app client ```.
   
   c) App client id will be generated and also App client secret.
+  
+### 2- Setup AWS Credentials + Create and Clone a GitHub Repository
+a) Access IAM -> Identity and Access Management
+
+b) Find or create a user(if you dont have). Then open up the user details and click on ```Add permissions```
+
+c) Click on Attach existing policies directly and find the service you want, in that case ```cognito```.
+
+d) Select ```AmazonCognitoDeveloperAuthentication```.
+
+Once you have your permission attached to your user, go to security credentials tab (on summary page).
+
+a) Create access key and it will generate a Access Key ID and Secret access Key.
+
+b) Download de .csv file that you will use for configuration of SDK.
+
+c) Go to windows explorer, on user root directory, create a folder .aws and a file credentials and must not have any extensions. Then edit this file using the code below.
+```
+[default]
+aws_access_key_id=XXX
+aws_secret_access_key=YYY
+```
+All keys XXX and YYY have to be used from the .csv file you have downloaded.
+
+After doing this we can connect to a AWS via the SDK.
