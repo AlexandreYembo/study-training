@@ -69,11 +69,11 @@ d) Select ```AmazonCognitoDeveloperAuthentication```.
 
 Once you have your permission attached to your user, go to security credentials tab (on summary page).
 
-a) Create access key and it will generate a Access Key ID and Secret access Key.
+e) Create access key and it will generate a Access Key ID and Secret access Key.
 
-b) Download de .csv file that you will use for configuration of SDK.
+f) Download de .csv file that you will use for configuration of SDK.
 
-c) Go to windows explorer, on user root directory, create a folder .aws and a file credentials and must not have any extensions. Then edit this file using the code below.
+g) Go to windows explorer, on user root directory, create a folder .aws and a file credentials and must not have any extensions. Then edit this file using the code below.
 ```
 [default]
 aws_access_key_id=XXX
@@ -82,3 +82,5 @@ aws_secret_access_key=YYY
 All keys XXX and YYY have to be used from the .csv file you have downloaded.
 
 After doing this we can connect to a AWS via the SDK.
+
+h) Create your repository on Git Hub and Clone in your computer.
