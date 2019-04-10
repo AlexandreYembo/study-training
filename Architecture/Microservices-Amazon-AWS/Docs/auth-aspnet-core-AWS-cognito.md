@@ -28,7 +28,7 @@ b) Provide a name of Pool name and select Review Defaults.
 
 we can edit:
  
- -Attributes (select username, email, and other way to validate the authentication)
+ - Attributes (select username, email, and other way to validate the authentication)
  
  - Polices (password polices and permissions)
  
