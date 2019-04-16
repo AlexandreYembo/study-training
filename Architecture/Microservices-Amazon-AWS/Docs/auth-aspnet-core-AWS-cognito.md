@@ -88,3 +88,25 @@ All keys XXX and YYY have to be used from the .csv file you have downloaded.
 After doing this we can connect to a AWS via the SDK.
 
 h) Create your repository on Git Hub and Clone in your computer.
+
+### 3- Sign up with AWS Cognito and ASP.Net MVC Coreddd
+1- Create an application on DotNet Core - Minimal version 2.0
+
+2- Add on NuGet a package Amazon.AspNetCore.Identity.Cognito
+
+3- Add on NuGet a package Amazon.Extensions.CognitoAuthentication
+
+4- Open appsettings.json
+
+Add section:
+```c#
+  "AllowedHosts": "*",
+  "AWS": {
+    "Region": "ap-southast-2", // you can define your region which you created your cognito user pool.
+    "UserPoolClientId": "[App client id]", // You get on AWS -> UserPool -> App clients
+    "UserPoolClientSecret": "[App client secret]", // You get on AWS -> UserPool -> App clients
+    "UserPoolId": "[Pool Id]"  // You get on AWS -> UserPool -> General Settings
+  }
+```
+
+Now my SDK will be able to connect on AWS Cognito
