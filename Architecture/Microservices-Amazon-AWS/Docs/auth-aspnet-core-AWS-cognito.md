@@ -89,7 +89,7 @@ After doing this we can connect to a AWS via the SDK.
 
 h) Create your repository on Git Hub and Clone in your computer.
 
-### 3- Sign up with AWS Cognito and ASP.Net MVC Coreddd
+### 3- Sign up with AWS Cognito and ASP.Net MVC Core
 1- Create an application on DotNet Core - Minimal version 2.0
 
 2- Add on NuGet a package Amazon.AspNetCore.Identity.Cognito
@@ -110,3 +110,23 @@ Add section:
 ```
 
 Now my SDK will be able to connect on AWS Cognito
+
+5- #### How to setup the identity provider
+Go to startup.cs file
+``` c#
+  public void ConfigureServices(IServiceCollection services){
+     ...
+     services.AddCognitoIdentity();  // Put only this line - Before MVC.
+     services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+  }
+``
+Inject all dependency for Cognito Identity.
+```c#
+  public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+  {
+      ...
+      app.UserAuthentication();  //Just before MVC
+      app.UserMvc(routes => ...
+  }
+```
+Now you can use Cognitos as Identity Provider
