@@ -119,7 +119,7 @@ Go to startup.cs file
      services.AddCognitoIdentity();  // Put only this line - Before MVC.
      services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
   }
-``
+```
 Inject all dependency for Cognito Identity.
 ```c#
   public void Configure(IApplicationBuilder app, IHostingEnvironment env)
