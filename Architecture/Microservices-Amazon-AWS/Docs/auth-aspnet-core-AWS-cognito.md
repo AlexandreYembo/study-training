@@ -158,6 +158,21 @@ startup.cs, Configure method
            _userManager = userManager;
            _pool = pool;
       }
-  
-  }
+   }
+```
+On Signup you can use GetUser to validate if the user exist:
+```c#
+   var user = _pool.GetUser(model.Email);
+```
+So you need to check if the property of user ```status``` is nullable, so you can create a new user:
+```c#
+   var createdUser = await _userManager.CreateAsync(user, model.Password).ConfigureAwait(false);
+```
+If you do not pass the password, so it will generate a random password.
+
+After create the user you need to check the property ```Succeeded```. If is true, so it was create successfuly.
+
+iF you setup on AWS Cognito some attributes (e.g name) as required, you need to type this, otherwise you will have an exception.
+```c#
+  user.Attributes.Add(CognitoAttributesConstants.Name, "Alexandre");
 ```
