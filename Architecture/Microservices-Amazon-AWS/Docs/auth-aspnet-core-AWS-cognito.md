@@ -111,7 +111,7 @@ Add section:
 
 Now my SDK will be able to connect on AWS Cognito
 
-5- #### How to setup the identity provider
+#### 5- How to setup the identity provider
 Go to startup.cs file
 ``` c#
   public void ConfigureServices(IServiceCollection services){
@@ -130,3 +130,18 @@ Inject all dependency for Cognito Identity.
   }
 ```
 Now you can use Cognitos as Identity Provider
+
+you can customize the options for password on SDK configuration
+startup.cs, Configure method
+```c#
+    app.UserAuthentication(config =>{
+       config.Password = new Microsoft.AspNetCore.Identity.PasswordOptions
+       {
+            RequireDigit = false,
+            RequireLength = 6
+       }
+    });
+```
+##### If you use the complexity password, you dont need to configure the Cognito SDK.
+
+6- In your controller 
