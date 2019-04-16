@@ -1,4 +1,8 @@
 # Authentication for ASP.NET Core websites with AWS Cognito
+### Definition
+Amazon Cognito lets you add user sign-up, sign-in, and access control to your web and mobile apps quickly and easily. Amazon Cognito scales to millions of users and supports sign-in with social identity providers, such as Facebook, Google, and Amazon, and enterprise identity providers via SAML 2.0.
+
+
 ### Authenticating Users
 #### Specifications of an Authentication system for Microservices
 1- Must have centralized repositories for users accounts.
