@@ -144,4 +144,20 @@ startup.cs, Configure method
 ```
 ##### If you use the complexity password, you dont need to configure the Cognito SDK.
 
-6- In your controller 
+6- In your controller Account you will need to create a constructor to inject the identity.
+```c#
+  public class AccountController : Controller
+  {
+      private readonly SignInManager<CognitoUser> _signInManager;
+      private readonly UserManager<CognitoUser> _userManager;
+      private readonly CognitoUserPool _pool;
+      
+      public AccountController(SignInManager<CognitoUser> signInManager, UserManager<CognitoUser> userManager, CognitoUserPool pool)
+      {
+           _signInManager = signInManager;
+           _userManager = userManager;
+           _pool = pool;
+      }
+  
+  }
+```
