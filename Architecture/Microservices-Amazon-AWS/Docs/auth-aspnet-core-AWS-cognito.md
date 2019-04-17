@@ -176,3 +176,27 @@ iF you setup on AWS Cognito some attributes (e.g name) as required, you need to 
 ```c#
   user.Attributes.Add(CognitoAttributesConstants.Name, "Alexandre");
 ```
+### 4- Confirm Email Address.
+You can implement a confirmation by email Address.
+ConfirmModel.cs
+```c#
+      public string Email {get;set;}
+      public string Code {get;set;}
+```
+AccountController.cs
+```c#
+  [HttpPost]
+  public async Task<IActionResult> Confirm(ConfirmModel model)
+  {
+        var user = await _userManager.FindByEmailAsync(model.Email);
+        if(user != null)
+        {
+             var result = await _userManager.ConfirmEmailAsync(user, model.Code);
+             if(result.Succeeded)
+             {
+                 //redirect To Action.
+             }
+        }
+  }
+```
+
