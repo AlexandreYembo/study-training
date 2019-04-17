@@ -188,10 +188,10 @@ AccountController.cs
   [HttpPost]
   public async Task<IActionResult> Confirm(ConfirmModel model)
   {
-        var user = await _userManager.FindByEmailAsync(model.Email);
+        var user = await _userManager.FindByEmailAsync(model.Email).ConfigureAwait(false);
         if(user != null)
         {
-             var result = await _userManager.ConfirmEmailAsync(user, model.Code);
+             var result = await _userManager.ConfirmEmailAsync(user, model.Code).ConfigureAwait(false);
              if(result.Succeeded)
              {
                  //redirect To Action.
@@ -199,4 +199,10 @@ AccountController.cs
         }
   }
 ```
+You can cast the UserManager object to Use CognitoUserManager<T>
+```c#
+   (_userManager as CognitoUserManager<CognitoUser>).ConfirmSignUpAsync(user, model.Code)
+```
+The method has the same parameter of the ```ConfirmEmailAsync``` that when you use UserManager Class
 
+But the problem is once we use indepency inject we will not need to cast this method, it is not good.
