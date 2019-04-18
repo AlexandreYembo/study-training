@@ -125,7 +125,7 @@ Inject all dependency for Cognito Identity.
   public void Configure(IApplicationBuilder app, IHostingEnvironment env)
   {
       ...
-      app.UserAuthentication();  //Just before MVC
+      app.UseAuthentication();  //Just before MVC
       app.UserMvc(routes => ...
   }
 ```
