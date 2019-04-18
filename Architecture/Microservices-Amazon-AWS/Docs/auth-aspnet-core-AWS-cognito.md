@@ -132,9 +132,9 @@ Inject all dependency for Cognito Identity.
 Now you can use Cognitos as Identity Provider
 
 you can customize the options for password on SDK configuration
-startup.cs, Configure method
+startup.cs, ConfigureServices method
 ```c#
-    app.UserAuthentication(config =>{
+    services.AddCognitoIdentity(config =>{
        config.Password = new Microsoft.AspNetCore.Identity.PasswordOptions
        {
             RequireDigit = false,
