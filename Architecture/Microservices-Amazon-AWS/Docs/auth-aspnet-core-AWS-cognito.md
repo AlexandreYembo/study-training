@@ -230,7 +230,7 @@ Add on Startup.cs a configuration. Method ```ConfigureServices```
    ...
   services.ConfigureApplicationCookie(options =>
   {
-      options.LoginPath = "AccountController/Login;
+      options.LoginPath = "AccountController/Login";
   });  //add before MVC.
   services.AddMvc()...
 ```
