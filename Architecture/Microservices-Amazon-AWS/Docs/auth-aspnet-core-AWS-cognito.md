@@ -206,3 +206,20 @@ You can cast the UserManager object to Use CognitoUserManager<T>
 The method has the same parameter of the ```ConfirmEmailAsync``` that when you use UserManager Class
 
 But the problem is once we use indepency inject we will not need to cast this method, it is not good.
+
+
+### 5- Login
+```c#
+  [HttpPost]
+  public async Task<IActionResult> Login_Post(LoginModel model)
+  {
+       var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false).ConfigureAwait(false);
+       
+       if(result.Succeeded)
+       {
+          //return result;
+       }
+       
+       //return error message
+  }
+```
