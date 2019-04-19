@@ -223,3 +223,14 @@ But the problem is once we use indepency inject we will not need to cast this me
        //return error message
   }
 ```
+To protect your controller you need to add the attribute ```[authorize]``` on your method.
+
+Add on Startup.cs a configuration. Method ```ConfigureServices```
+```c#
+   ...
+  services.ConfigureApplicationCookie(options =>
+  {
+      options.LoginPath = "AccountController/Login;
+  });  //add before MVC.
+  services.AddMvc()...
+```
