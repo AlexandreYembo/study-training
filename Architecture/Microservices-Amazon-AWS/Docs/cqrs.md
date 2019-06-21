@@ -25,3 +25,15 @@ A method of software design in which:
 1- Focus is on the domain, and domain logic. Understanding the business over technology.
 
 2- Constantly consult with the domain expert to improve the domain logic and domain models.
+
+##### There is a concept called Ubiquitous language structured around the domain model, used and understood by all team members both techies and business experts.
+
+### Concepts:
+#### 1- Bounded Context:
+1- Is a boundary around models that are described by a certain Ubiquitous language.
+
+#### Every Micro-service represents a Bounded Context
+
+#### Important: When you have many APIs calling each other, does not make sense have 2 or 3 different micro-services, because they are part of only one Bounded Context, in that case the have to be part of only one micro-service.
+
+#### Then if you have 2 or more Bounded Context you have to separated them for each bounded context you will have one micro-service.
