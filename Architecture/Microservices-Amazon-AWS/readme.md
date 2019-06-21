@@ -8,3 +8,9 @@
 
 ### [Eventual Consistency and Compensating Transactions](https://github.com/AlexandreYembo/study-training/blob/master/Architecture/Microservices-Amazon-AWS/Docs/eventual-consist-compens-transactions.md)
 
+
+
+
+
+### ### [Command and Query Segregation (CQRS) Pattern](https://github.com/AlexandreYembo/study-training/blob/master/Architecture/Microservices-Amazon-AWS/Docs/cqrs.md)
+
