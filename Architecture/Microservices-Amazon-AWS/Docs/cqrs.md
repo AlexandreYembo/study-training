@@ -35,5 +35,6 @@ A method of software design in which:
 #### Every Micro-service represents a Bounded Context
 
 #### Important: When you have many APIs calling each other, does not make sense have 2 or 3 different micro-services, because they are part of only one Bounded Context, in that case the have to be part of only one micro-service.
+![Alt text](https://github.com/AlexandreYembo/study-training/blob/master/Architecture/Microservices-Amazon-AWS/Docs/ddd.PNG "DDD")
 
 #### Then if you have 2 or more Bounded Context you have to separated them for each bounded context you will have one micro-service.
