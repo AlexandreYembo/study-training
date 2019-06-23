@@ -1,6 +1,4 @@
-# Command and Query Segregation (CQRS) Pattern.
-
-### Domain Driven Design and Microservices
+# Domain Driven Design and Microservices
 1- A domain is a sphere of knowledge or activity.
 
 2- In software engineering a domain is the area of business that the application is intended to apply.
