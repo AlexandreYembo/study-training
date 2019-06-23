@@ -36,4 +36,4 @@ A method of software design in which:
 
 #### Then if you have 2 or more Bounded Context you have to separated them for each bounded context you will have one micro-service.
 
-![Alt text](https://github.com/AlexandreYembo/study-training/blob/master/Architecture/Microservices-Amazon-AWS/Docs/ddd.PNG "DDD")
+![Alt text](https://github.com/AlexandreYembo/study-training/blob/master/Architecture/Microservices-Amazon-AWS/Docs/images/ddd.PNG "DDD")
