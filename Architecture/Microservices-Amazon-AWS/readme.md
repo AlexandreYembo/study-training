@@ -12,5 +12,6 @@
 
 
 
-### [Command and Query Segregation (CQRS) Pattern](https://github.com/AlexandreYembo/study-training/blob/master/Architecture/Microservices-Amazon-AWS/Docs/cqrs.md)
+### Command and Query Segregation (CQRS) Pattern
+  #### [Domain Driven Design and Microservices](https://github.com/AlexandreYembo/study-training/blob/master/Architecture/Microservices-Amazon-AWS/Docs/cqrs.md)
 
