@@ -82,6 +82,7 @@ g) Go to windows explorer, on user root directory, create a folder .aws and a fi
 [default]
 aws_access_key_id=XXX
 aws_secret_access_key=YYY
+region=<location>
 ```
 All keys XXX and YYY have to be used from the .csv file you have downloaded.
 
