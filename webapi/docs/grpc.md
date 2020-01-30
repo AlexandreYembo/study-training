@@ -81,5 +81,5 @@ It is small and fast and then it will get sent across HTTP 2 to the client and b
 ###### HTTP APIs
    - Content first (URLs, HTTP method, JSON)
    - Content is designed for humans
-   -Empahsises HTTP
+   - Empahsises HTTP
 
