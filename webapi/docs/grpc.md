@@ -64,3 +64,21 @@ Service method and structure of the request and the response.
 
 ##### Wire format
 Binary format for network transmission.
+
+It is a the actual serialization and it will take the messages defined in c#, and we'll turn it into this binary format.
+
+It is small and fast and then it will get sent across HTTP 2 to the client and because this is an open standard, you get the benefits of a binary format and that it's very fast, but also because it's standards-based as cross-platform like it's not only .net.
+
+####### Importantto note that because it's binary is not human readable you need need to have both tools to understand the binary. You also need to have the contract because it's not a self descriptor.
+
+##### gRPC vs HTTP APIs
+
+###### gRPC
+   - Contract first (proto file)
+   
+   - Contract is designed for humans
+   
+###### HTTP APIs
+   - Content first (URLs, HTTP method, JSON)
+   - Content is designed for humans
+
