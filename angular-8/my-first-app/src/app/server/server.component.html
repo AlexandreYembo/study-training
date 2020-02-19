@@ -1,0 +1,12 @@
+
+<input type="text" class="form-control" (input)="updateMyServerDescription($event)">
+
+
+<label>Server name</label>
+<input type="text" class="form-control" [(ngModel)]="serverId">
+
+<button class="btn btn-primary" [disabled]="serverOff" (click)="addServer()">Add Server</button>
+
+
+<p> The Server {{ serverId }}  is {{ serverStatus }}</p>
+<p> The {{ 'Server' }} {{ serverId }}  is {{ getServerStatus() }}</p>
