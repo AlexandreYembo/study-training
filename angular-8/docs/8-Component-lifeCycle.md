@@ -7,7 +7,7 @@ All hook will be imported from ```"@angular/core"```
 ### - ngOnChange
 - Called after a bound input property changes.
 
-- Only properties decorated with ```@input``
+- Only properties decorated with ```@input```
 
 ```ts
     export class MyComponent implements OnChange{
