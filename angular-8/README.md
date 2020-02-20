@@ -14,11 +14,11 @@
 
 6 - [Using local references in template](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/6-Using-local-references-in-template)
 
-7 - [View Child](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/7-ViewChild.md) 
+7 - [ViewChild](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/7-ViewChild.md) 
 
 8 - [Component LifeCycle](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/8-Component-lifeCycle.md) 
 
-9 - [Component LifeCycle](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/9-ContentChild.md) 
+9 - [ContentChild](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/9-ContentChild.md) 
 
 [Version notation](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/versions-notation.md) 
 
