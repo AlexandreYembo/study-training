@@ -1,4 +1,4 @@
-# Using local references in template
+# 6-Using local references in template
 Instead of use this implementation:
 ```html
     <input type="text" class="form-control" [(ngModel)]="myModelName">

@@ -1,6 +1,6 @@
 # Versions notation
-
-### @ViewChild() in Angular 8+
+### @ViewChild()
+#### in Angular 8+
 Instead of:
 ```ts
 @ViewChild('serverContentInput') serverContentInput: ElementRef;
@@ -13,5 +13,14 @@ The same change (add { static: true } as a second argument) needs to be applied 
 
 If you DON'T access the selected element in ```ngOnInit``` (but anywhere else in your component), set ```static: false``` instead!
 
-### @ViewChild() in Angular 9
+#### in Angular 9
 You only need to add ```{ static: true }``` (if needed) but not ```{ static: false }```.
+
+
+### @ContentChild()
+#### in Angular 8+
+``` @ContentChild('contentParagraph', {static: true}) paragraph: ElementRef; ```
+
+The same change (add ```{ static: true }``` as a second argument) needs to be applied to ALL usages of ```@ContentChild()``` if you use the selected element inside of ```ngOnInit```.
+
+If you DON'T use the selected element in ```ngOnInit```, set ```static: false``` instead.

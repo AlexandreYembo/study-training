@@ -1,4 +1,4 @@
-# ViewChild
+# 7-ViewChild
 
 ### Getting Access to the Template & DOM with @ViewChild
 You defined in HTML the local reference:

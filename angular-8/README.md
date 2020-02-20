@@ -16,6 +16,9 @@
 
 7 - [View Child](https://github.com/AlexandreYembo/angular8/blob/master/docs/7-ViewChild.md) 
 
+8 - [Component LifeCycle](https://github.com/AlexandreYembo/angular8/blob/master/docs/8-Component-lifeCycle.md) 
+
+9 - [Component LifeCycle](https://github.com/AlexandreYembo/angular8/blob/master/docs/9-ContentChild.md) 
 
 [Version notation](https://github.com/AlexandreYembo/angular8/blob/master/docs/versions-notation.md) 
 
