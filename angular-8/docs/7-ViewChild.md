@@ -3,7 +3,7 @@
 ### Getting Access to the Template & DOM with @ViewChild
 You defined in HTML the local reference:
 ```html
-    <input type="text" class="form-control" #>
+    <input type="text" class="form-control" #myVariableNameInput>
 ```
 and in the Typescript code:
 ```ts
