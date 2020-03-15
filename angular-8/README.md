@@ -10,7 +10,7 @@
 
 4 - [Directives](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/4-Directives.md) 
 
-   4.1 - [Creating a basic Attribute Directive](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/4.1-creating-basic-attribute-directive) 
+   4.1 - [Creating a basic Attribute Directive](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/4.1-creating-basic-attribute-directive.md) 
 
 5 - [View Encapsulation](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/5-View-Encapsulation.md) 
 
