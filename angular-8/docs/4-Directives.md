@@ -100,3 +100,13 @@ In the service component you add a new property
 
 ### ng-content
 When you use ```<ng-content>``` it still directive, just using element like selector and this serves as a hook you can place in your component to mark the place for Angular where it should add any component it finds between the opening and closing tag.
+
+### ngSwitch
+```html
+<div [ngSwitch]="value">  <--- no star '*'
+    <p *ngSwitchCase="5"> Value is 5 <p>
+    <p *ngSwitchCase="10"> Value is 10 <p>
+    <p *ngSwitchCase="20"> Value is 20 <p>
+    <p *ngSwitchDefault> Value is default <p>
+</div>
+```
