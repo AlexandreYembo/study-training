@@ -22,6 +22,8 @@
 
 9 - [ContentChild](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/9-ContentChild.md) 
 
+10 - [Dependency Injection ](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/10-Dependency-Injection.md) 
+
 [Version notation](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/versions-notation.md) 
 
 [TypeScript Tips:](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/ts-tips.md) 
