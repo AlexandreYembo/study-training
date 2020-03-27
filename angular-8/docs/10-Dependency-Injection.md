@@ -46,7 +46,7 @@ When you inject the service in a specific component, so Angular nows how to crea
 
 ##### The lowest level therefore is a single component with no child
 
-#### How to implement in Hierarchiakl Leval
+#### How to implement in Hierarchial Level
 Considering Level of ComponentParent with 2 children ComponentChildA and ComponentChildB
 
 ```ts
@@ -84,3 +84,30 @@ export class MyServiceA{
 Where ```@Injectable``` imports from ```'@angular/core'```. This tells to Angular that now this service is injectable or that something can be injected in there.
 
 You only have to use ```@Injectable``` to the ```receiving service``` (when you expect to get injectable)
+
+### Version Notation
+#### Services in Angular 6+
+If you're using ```Angular 6+``` (check your ```package.json```  to find out), you can provide application-wide services in a different way.
+
+Instead of adding a service class to the ```providers[]```  array in AppModule , you can set the following config in ```@Injectable()``` :
+```ts
+@Injectable({providedIn: 'root'})
+export class MyService { ... }
+```
+This is exactly the same as:
+```ts
+export class MyService { ... }
+```
+and
+```ts
+import { MyService } from './path/to/my.service';
+ 
+@NgModule({
+    ...
+    providers: [MyService]
+})
+export class AppModule { ... }
+```
+
+Using this new syntax is ```completely optional```, the traditional syntax (using ```providers[]``` ) will still work. 
+The "new syntax" does offer one advantage though: Services ```can be loaded lazily``` by Angular (behind the scenes) and redundant code can be removed automatically. This can lead to a better performance and loading speed - though this really only kicks in for bigger services and apps in general.
