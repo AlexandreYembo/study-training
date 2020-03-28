@@ -61,11 +61,11 @@ export class ComponentParent {
 
 ```ts
 export class ComponentChildA{
-    constructor(privated myService: MyServuce){}
+    constructor(private myService: MyServuce){}
 }
 
 export class ComponentChildB{
-    constructor(privated myService: MyServuce){}
+    constructor(private myService: MyServuce){}
 }
 ```
 So, for all children you ```have to``` remove the instance of service provider in ```@Component```, because when you keep you are saying that each Component 
