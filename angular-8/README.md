@@ -24,7 +24,9 @@
 
 9 - [ContentChild](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/9-ContentChild.md) 
 
-10 - [Dependency Injection ](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/10-Dependency-Injection.md) 
+10 - [Dependency Injection](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/10-Dependency-Injection.md) 
+
+11 - [Routing](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/11-Routing.md) 
 
 [Version notation](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/versions-notation.md) 
 
