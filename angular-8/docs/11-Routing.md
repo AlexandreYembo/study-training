@@ -109,3 +109,88 @@ export class MyComponent{
 }
 ```
 where ```router``` imports from ```'@angular/router'```
+
+### Diferences between routerLink and Navigate Method
+When you use relative path in the same component to navigate, navigate method ```this.router.navigate(['servers'])``` unlike routerLink this method does not know on which route you are currently on. The routerLink always knows in which component it sits.
+
+But we can tell to navigate method where we currently are. So we have to pass a second argument to the navigate method to configure it.
+First we have to inject type ```ActivatedRoute```  in the constructor to define our current route.
+```ts
+    constructor(private router: Router, private currentRoute: ActivatedRoute)
+
+```
+where ```Router``` and ```ActivatedRoute``` import from ```'@angular/router'```.
+
+This will inject the currently active routes, so for the component you loaded, this will be the route which loaded this component and the route simply is kind of a complex Javascript object which keeps a lot of meta information about the currently active route.
+
+and then we have to change the configuration for navigate.
+```ts
+    this.router.navigate(['servers'], { relativeTo: this.currentRoute });
+
+```
+relativeTo --> We define relative to which route this link should be loaded and by default, this is always the root domain.
+
+### Passing Parameters to Routes
+In appModules.ts you have to change the appRoutesConfiguration
+```ts
+    const appRoutes: Routes = [
+        {path: 'users/:id', component: UserComponent},  // get 1 parameter: id
+        {path: 'users/:id/:name', component: UserComponent}, //get 2 parameters: id and name
+    ]
+```
+where ```:id``` is the parameter you pass in your route.
+
+Now to fetch route parameters you have to change your component typescript.
+
+You have to inject  ```ActivatedRoute``` and import from ```'@angular/router'```.
+```ts
+export class UserComponent implements onInit {
+    user: {id: name, name: string };
+    constructor(private currentRoute: ActivatedRoute){ }
+        
+    ngOnInit(){
+        this.user = {
+            id: this.currentRoute.snapshot.params['id'], // <- takes from route/:id
+            name: this.currentRoute.snapshot.params['name'],// <- takes from route/:id/:name
+        }
+    }
+}
+```
+###### Important: To avoid confusion, the ActivatedRoute object we injected will give us access to the id passed in the URL.
+
+If you want to construct a route which is your user id and name in your component, by using ```routerLink``` we can implement the follow code:
+```html
+<a [routerLink]="['/users', 10, 'Ana']"> Reload users </a> <!-- /users/10/Ana -->
+```
+This code will change the Url but the parameters won't change. It is because when you implement in ```ngOnInit()``` the snapshot takes the parameter from the route you defined in ```appRoute``` in  ```appModule```. Basically does not re-render the component because it would cost us performance.
+
+So, it is good that by default, it won't recreate the whole component and destroy the old one if we already are on that component.
+
+Now, to be able to readct to subsequent changes, we need a different approach:
+```ts
+ ngOnInit(){
+        this.user = {
+            id: this.currentRoute.snapshot.params['id'], // <- takes from route/:id
+            name: this.currentRoute.snapshot.params['name'],// <- takes from route/:id/:name
+        }
+    }
+    this.route.params
+        .subscribe(     //< This method will be called once the parameter change, not when you load your component.
+           (params: Params) => { // < first parameters is more important. Basically whenever the parameters change.  
+                                //It will be fired whenever new data is sent through that observable.
+                this.user.id = params['id'];
+                this.user.name = params['name'];
+           }
+        );
+```
+where ```Params``` imports from ```'@angular/router'```
+
+we used snapshot than params before, because params is an ```observable```.
+
+- You can check the note about Route Observable [here](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/11.1-Routing-observables-note.md) 
+
+
+### Observable
+Bisically observablese are a feature added by some other third-party package, not by Angular, by ```heavilly``` used by Angular which allow you to easily work with asynchronous tasks.
+
+So an observable is an easy way to subscribe to some event which might happen in the future, to then execute some code when it happens without having to wait for it now.
