@@ -1,0 +1,10 @@
+/Users/alexandreyembo/Projects/Development/GitRepositories/study-training/csharp/EventAndDelegates/bin/Debug/netcoreapp3.1/EventAndDelegates.deps.json
+/Users/alexandreyembo/Projects/Development/GitRepositories/study-training/csharp/EventAndDelegates/bin/Debug/netcoreapp3.1/EventAndDelegates.runtimeconfig.json
+/Users/alexandreyembo/Projects/Development/GitRepositories/study-training/csharp/EventAndDelegates/bin/Debug/netcoreapp3.1/EventAndDelegates.runtimeconfig.dev.json
+/Users/alexandreyembo/Projects/Development/GitRepositories/study-training/csharp/EventAndDelegates/bin/Debug/netcoreapp3.1/EventAndDelegates.dll
+/Users/alexandreyembo/Projects/Development/GitRepositories/study-training/csharp/EventAndDelegates/bin/Debug/netcoreapp3.1/EventAndDelegates.pdb
+/Users/alexandreyembo/Projects/Development/GitRepositories/study-training/csharp/EventAndDelegates/obj/Debug/netcoreapp3.1/EventAndDelegates.csprojAssemblyReference.cache
+/Users/alexandreyembo/Projects/Development/GitRepositories/study-training/csharp/EventAndDelegates/obj/Debug/netcoreapp3.1/EventAndDelegates.AssemblyInfoInputs.cache
+/Users/alexandreyembo/Projects/Development/GitRepositories/study-training/csharp/EventAndDelegates/obj/Debug/netcoreapp3.1/EventAndDelegates.AssemblyInfo.cs
+/Users/alexandreyembo/Projects/Development/GitRepositories/study-training/csharp/EventAndDelegates/obj/Debug/netcoreapp3.1/EventAndDelegates.dll
+/Users/alexandreyembo/Projects/Development/GitRepositories/study-training/csharp/EventAndDelegates/obj/Debug/netcoreapp3.1/EventAndDelegates.pdb
