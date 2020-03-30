@@ -1,4 +1,4 @@
-# Routing
+# 11-Routing
 This is the core of a project.
 
 ### Where to register a rote?
@@ -189,8 +189,50 @@ we used snapshot than params before, because params is an ```observable```.
 
 - You can check the note about Route Observable [here](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/11.1-Routing-observables-note.md) 
 
+### Passing Query Parameters and Fragments
+So, if you want to implement query in parameters url and fragments ```http://localhost:4200/servers/10/Anna?mode=editing#```.
 
-### Observable
-Bisically observablese are a feature added by some other third-party package, not by Angular, by ```heavilly``` used by Angular which allow you to easily work with asynchronous tasks.
+where parameters is ```'?mode=editing'``` 
 
-So an observable is an easy way to subscribe to some event which might happen in the future, to then execute some code when it happens without having to wait for it now.
+and fragments ```'#'``` with the hash sign to jump to a specific place in your app.
+
+In your ```appRoute``` in ```appModule.ts``` you might change or create a new route configuration.
+```ts
+const appRoutes: Routes = [
+     {path:'users', component: UserComponent},
+    {path:'users/:id/edit', component: EditUserComponent} //< where Id is the parameter and after slash, example 'edit' to describe 
+                                                    // what will happen in this component.
+]
+```
+
+Then you can implement in your component a link to redirect the user to edit an specific component:
+```html
+<a [routerLimk]="['/users', 5, 'edit']"> <!-- 'edit' is the parameter that choose the EditUserComponent -->
+```
+Now to add the query parameter you might change the code above:
+```html
+<a [routerLimk]="['/users', 5, 'edit',]"
+   [queryParams]="{allowEdit: '1'}"> <!-- 'queryParams' we can define in this javascript object a query params, defined by key-value pairs-->
+```
+Query Params ```[queryParams]``` is ```not a new directive```, it's just another bindable property of the ```routerLink``` directive.
+
+Then the result: ```http://localhost:4200/users/5/edit?allowEdit=1```.
+
+If you want to implement you might use another bindable property: ```[fragment]```.
+```html
+<a [routerLimk]="['/users', 5, 'edit',]"
+   [queryParams]="{allowEdit: '1'}"
+   fragment="'loading'"
+>
+```
+Then the result: ```http://localhost:4200/users/5/edit?allowEdit=1#loading```.
+
+Now for navigate method:
+```ts
+    this.router.navigate(
+        ['/users', id, 'edit'], 
+        {
+            queryParams: { allowEdit: '1' }
+        }, 
+        fragment='loading');
+```

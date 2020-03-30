@@ -1,4 +1,4 @@
-# Dependency Injection
+# 10-Dependency Injection
 ### What are services?
 Service is basically just another piece in Angular app.
     - Can act as central repository.
