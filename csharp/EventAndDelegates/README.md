@@ -1,4 +1,5 @@
 # Events and Delegates
+This section contains the documentation and the implementation about Events and Delegates.
 
 ## Events
   1- A mechanism for comunication between objects.
