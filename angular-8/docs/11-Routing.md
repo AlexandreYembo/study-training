@@ -236,3 +236,69 @@ Now for navigate method:
         }, 
         fragment='loading');
 ```
+
+### Retrieving Query Parameters and Fragments
+First you have to inject ```ActivatedRoute``` on the constructor.
+```ts
+    constructor(private route: ActivatedRoute){}
+```
+Where ```ActivatedRoute``` imports from ```'@angular/router'```.
+
+and in ```ngOnInit``` you can use 2 ways.
+```ts
+    ngOnInit(){
+       var par1 = this.route.snapshot.queryParams;
+       var par2 = this.route.snapshot.framgment;
+    }
+```
+This might bring the same problem as with when we use params, because this only run or update at the time this component is created.
+
+For the other you can also use observable:
+```ts
+    this.route.queryParams.subscribe();
+    this.route.fragment.subscribe();
+```
+###### Important: You don't need to unsubscribe here, Angular will handle it for you just like it did for params.
+
+### Child (nested) routes
+You will need to change your ```appRoute``` in ```app.modules.ts``` and add a children array
+```ts
+const appRoutes: Routes = [
+    { path: 'servers', component: ServersComponent, children:[
+        { path: ':id', component: ServersComponent },
+        { path: ':id/edit', component: EditServersComponent }
+    ]}
+]
+```
+Child routes of a route need a separate outlet because they can't overwrite my Component. Instead they should be loaded nested into this component.
+
+For this, in my component I have to remove ```<app-mycomponent>``` and change for ```<router-outlet>```.
+
+This will add a new hook which will be used on all child routes of the route being loaded the component (serversComponent) which is defined in the route ```path: 'servers', children [...]```
+
+### Configuring the Handling of Query Parameters
+When you access children route, sometimes you need to handle (preserve) query parameters to don't lose the information. For this you have to do some implementations. When using router natigate you need to add ```queryParamsHandling```.
+```ts
+    this.router.navigate('[edit]', {relativeTo: this.route, queryParamsHandling: 'preserve'})
+
+```
+For ```queryParamsHandling``` you can use:
+
+- ```'merge'` -> this merge to a old query params which any new.
+
+- ```'preserve'``` -> keep the old query params. This will override a new query, for the old ones.
+
+### Redirecting the user to 404 error handling
+You create a new component and register the route of the new component on ```app.module.ts```
+```ts
+const appRoutes: Routes = [
+    { path: '**', component: NotFoundComponent}
+]
+```
+When you use ```'**'``` in route, this is the wildcard route which mean catch all paths you don't know and the order is super important here.
+
+###### Important: Make sure that thius very generic route is the last one in your array of routes because your routes get parsed from top to bottom.
+In other words, if this is defined at the beginning, you would always get redirected to ```not found ```.
+
+### How to create a custom app module for routing?
+- You can see the implmentation [here](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/11.2-Creating-a-route-app-module.md) 

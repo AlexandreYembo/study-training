@@ -5,6 +5,9 @@
     <!-- <a [routerLink]="['servers']">Reload Page</a> it will make http://localhost:4200/server/server -->
     <div class="list-group">
       <a
+        [routerLink]="['/servers', server.id]"
+        [queryParams]="{allowEdit: server.id === 3 ? '1' : '0'}"
+        fragment="loading"
         href="#"
         class="list-group-item"
         *ngFor="let server of servers">
@@ -13,9 +16,11 @@
     </div>
   </div>
   <div class="col-xs-12 col-sm-4">
-    <app-edit-server></app-edit-server>
+    <!-- <app-edit-server></app-edit-server> -->
+    <!-- user for nested routes to call the children references -->
+    <router-outlet></router-outlet>
     <hr>
-    <app-server></app-server>
+    <!-- <app-server></app-server> -->
   </div>
 </div>
 
