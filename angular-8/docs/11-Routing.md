@@ -128,7 +128,7 @@ and then we have to change the configuration for navigate.
     this.router.navigate(['servers'], { relativeTo: this.currentRoute });
 
 ```
-relativeTo --> We define relative to which route this link should be loaded and by default, this is always the root domain.
+```relativeTo``` --> We define relative to which route this link should be loaded and by default, this is always the root domain.
 
 ### Passing Parameters to Routes
 In appModules.ts you have to change the appRoutesConfiguration
@@ -284,7 +284,7 @@ When you access children route, sometimes you need to handle (preserve) query pa
 ```
 For ```queryParamsHandling``` you can use:
 
-- ```'merge'` -> this merge to a old query params which any new.
+- ```'merge'``` -> this merge to a old query params which any new.
 
 - ```'preserve'``` -> keep the old query params. This will override a new query, for the old ones.
 
@@ -302,3 +302,6 @@ In other words, if this is defined at the beginning, you would always get redire
 
 ### How to create a custom app module for routing?
 - You can see the implmentation [here](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/11.2-Creating-a-route-app-module.md) 
+
+### Guards
+- You can see the documentation [here](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/11.3-Guards.md) 
