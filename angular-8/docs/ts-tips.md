@@ -37,3 +37,10 @@ We can access those files in WebPack folder, in chrome DevTools for example.
 
 ### Generic types
 In Typescript if you want to define a generic you use: ```<> ```.
+
+### Convert string to number
+In Typecript, to convert a string in a number you only need to add at the begining of your string object ```+```.
+```ts
+    let myString = '1';
+    let myNumber = +myString;
+```
