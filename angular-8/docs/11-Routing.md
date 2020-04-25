@@ -372,5 +372,19 @@ export class MyComponent implements OnInit {
     );
   }
 }
-
 ```
+
+### Understanding Location Strategies
+The server hosting your app does not nknow the route, therefore you need to make sure that in such a case, your web server returns the index.html file.
+
+But for any reason you can't get this to work or you need to support very old browsers which are not able to parse paths like this in the cliet which Angular does then, there is an alternative approach to using. So you will need to enable hashtag to fix this. On your app Route:
+```ts
+    imports: [
+        RouteModule.forRoot(appRoutes, {userHash: true}) //<- userHash by default is false.
+    ]
+```
+What this hashtag will do is, it informs your web server, only care the url before the hashtag.
+```http://mysite.com/#/user```
+Server will care only the url: ```http://mysite.com```  and the part after the hashtag will  be parse by the client (angular): ```#/..paths```.
+
+But we should not follow this approach.

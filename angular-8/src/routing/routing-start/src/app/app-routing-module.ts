@@ -31,7 +31,7 @@ const appRoutes: Routes = [
   
 @NgModule({
     imports: [
-        RouterModule.forRoot(appRoutes)
+        RouterModule.forRoot(appRoutes, {useHash: true})
     ],
     exports: [RouterModule] //when I use export a defined I want to export this module and what should be accessible to this module which imports this module?
 })
