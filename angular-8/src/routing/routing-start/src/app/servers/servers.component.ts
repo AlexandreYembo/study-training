@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServersService } from './servers.service';
+import { ActivatedRoute, Router, Data } from '@angular/router';
 
 @Component({
   selector: 'app-servers',
@@ -8,11 +9,19 @@ import { ServersService } from './servers.service';
 })
 export class ServersComponent implements OnInit {
   private servers: {id: number, name: string, status: string}[] = [];
+  server: {id: number, name: string, status: string};
 
-  constructor(private serversService: ServersService) { }
+  constructor(private serversService: ServersService,
+              private route: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit() {
-    this.servers = this.serversService.getServers();
+    this.route.data.subscribe(
+      (data: Data) => {
+        this.server = data['server'];
+      }
+    );
+    // this.servers = this.serversService.getServers();
   }
 
 }

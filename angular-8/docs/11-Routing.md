@@ -334,3 +334,43 @@ and HTML file
 Then when you pass any information that it is not found for example, it will redirect to this page passing the parameter through the data defined on Route configuration.
 
 ### Resolving Dynamic data with the resolve Guard
+You will need to create a guard service to resolve this approach.
+```ts
+interface Server{
+    id: number;
+    name: string;
+    status: string;
+}
+
+@Injectable()  //<-- Make the service injectable to use in component.
+export class ServerResolver implements Resolve<Server>{
+    constructor(private serversService : ServersService){}
+    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) : Observable<Server> | Promise<Server> | Server {
+        return this.serversService.getServer(+route.params['id']);
+```
+and then you need to register the provider on app.module.ts
+```ts
+    providers:[..., ServerResolver]
+```
+Also you will need to specify on your route app.
+```ts
+    { path: ':id', component: ServerComponent, resolve: {server: ServerResolver} } //<-- you send you parameters dynamicallu
+```
+Now on your component you can use this guard to get the parameter.
+```ts
+export class MyComponent implements OnInit {
+  server: {id: number, name: string, status: string};
+   constructor(private serversService: ServersService,
+              private route: ActivatedRoute,
+              private router: Router) { }
+
+  ngOnInit() {
+    this.route.data.subscribe(
+      (data: Data) => {
+        this.server = data['server']; //<--  parameter comes from app route: [resolve: {server: ServerResolver} } ]
+      }
+    );
+  }
+}
+
+```
