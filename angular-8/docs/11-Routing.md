@@ -301,7 +301,36 @@ When you use ```'**'``` in route, this is the wildcard route which mean catch al
 In other words, if this is defined at the beginning, you would always get redirected to ```not found ```.
 
 ### How to create a custom app module for routing?
-- You can see the implmentation [here](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/11.2-Creating-a-route-app-module.md) 
+- You can see the implementation [here](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/11.2-Creating-a-route-app-module.md) 
 
 ### Guards
 - You can see the documentation [here](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/11.3-Guards.md) 
+
+### Passing static data to a route.
+On your route file configuration, you need to define a route passing data parameter:
+```ts
+  { path: 'not-found', component: YourErrorComponent, data : {message: 'Page not found!'} },
+```
+and on your component ts
+```ts
+export class YourErrorComponent implements OnInit {
+  errorMessage: string;
+  constructor(private route: ActivatedRoute) { }
+
+  ngOnInit() {
+    //this.errorMessage = this.route.snapshot.data['message']; if does not change you can use this
+    this.route.data.subscribe(
+      (data: Data) => {
+        this.errorMessage = data['message'];
+      }
+    );
+  }
+}
+```
+and HTML file
+```html
+<h4> {{ errorMessage }} </h4>
+```
+Then when you pass any information that it is not found for example, it will redirect to this page passing the parameter through the data defined on Route configuration.
+
+### Resolving Dynamic data with the resolve Guard
