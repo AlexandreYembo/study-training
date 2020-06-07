@@ -11,6 +11,9 @@ namespace hackerrank
             Console.WriteLine("Type 'SolveMeFirst' for Solve Me First");
             Console.WriteLine("Type  'DiagonalDifference' for Diagonal Difference");
             Console.WriteLine("Type 'PlusMinus' for Plus Minus");
+            
+            Console.WriteLine("############# Mathematics ##############");
+            Console.WriteLine("Type 'SherlockAndDivisors' for Plus Minus");
 
            string code = Console.ReadLine();
            Instance.Run(code);
