@@ -1,5 +1,6 @@
 # Iterator block implementation
   1- An iterator, in the context of C#, is a block of code that returns an ordered sequence of values of a collection or array. It is a member function implemented using the iterator block, which contains one or more statements containing the "yield" keyword.
+  
   2- In general, an iterator is similar to a database cursor in that it provides access to data elements in a collection, but does not perform iteration. An iterator can be implemented in C# as a method, operator, or get accessor. For example, an iterator can be used to traverse a collection of strings to display the content of each string in the collection.
  More details in link: https://www.techopedia.com/definition/20184/iterator-c-sharp
    
