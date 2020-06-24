@@ -6,17 +6,20 @@
 
 ### IL - Intermediate Language
 #### CLR - Common Language Runtime - Compile language
-    1- Translate from IL code to machine Code. This process is called JIT (Just in time Compilation)
-    2- When you compile an application, C# compiler compiles your code to IL (Intermediate Language) code. IL code is platform agnostics, which makes it possible to a take a C# program on a different computer with different hardware architecture and operating system and run it. For this to happen, we need CLR. When you run a C# application, CLR compiles the IL code into the native machine code for the computer on which it is running. This process is called Just-in-time Compilation (JIT).
+ 1- Translate from IL code to machine Code. This process is called JIT (Just in time Compilation)
+ 
+ 2- When you compile an application, C# compiler compiles your code to IL (Intermediate Language) code. IL code is platform agnostics, which makes it possible to a take a C# program on a different computer with different hardware architecture and operating system and run it. For this to happen, we need CLR. When you run a C# application, CLR compiles the IL code into the native machine code for the computer on which it is running. This process is called Just-in-time Compilation (JIT).
 
 #### Assembly
 A single unit of deployment of .NET applications.
 This is a more accurate description of an assembly. It's a file, in the form of a executable or a DLL, that contains one ore more namespaces and classes.
 
 #### Architecture of .NET Applications
-    1- An application written with C# consists of building blocks called classes.
-    2- A class is a container for data (attributes) and methods (functions).
-    3- Attributes represent the state of the application
+  1- An application written with C# consists of building blocks called classes.
+  
+  2- A class is a container for data (attributes) and methods (functions).
+  
+  3- Attributes represent the state of the application
 
 #### Primitive Types
     byte, short, int, long, float, double, decimal, char and bool
