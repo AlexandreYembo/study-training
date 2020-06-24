@@ -5,7 +5,7 @@
 ## Architecture
 
 ### IL - Intermediate Language
-#### CLR - Common Language Runtime - Compile langue
+#### CLR - Common Language Runtime - Compile language
     1- Translate from IL code to machine Code. This process is called JIT (Just in time Compilation)
     2- When you compile an application, C# compiler compiles your code to IL (Intermediate Language) code. IL code is platform agnostics, which makes it possible to a take a C# program on a different computer with different hardware architecture and operating system and run it. For this to happen, we need CLR. When you run a C# application, CLR compiles the IL code into the native machine code for the computer on which it is running. This process is called Just-in-time Compilation (JIT).
 
