@@ -18,10 +18,14 @@ Introduce to .NET framework the concept of type parameters, that is possible des
 ### Contraint
 
 
-where T : IComparable --> As in applying a constraint to an interface
+where T : IComparable --> As in applying a constraint to an interface.
+
 where T : Product --> We can apply a constraint to a class.
-where T : struct --> Should be a value type
-where T : class --> Should be a reference type
+
+where T : struct --> Should be a value type.
+
+where T : class --> Should be a reference type.
+
 where T : new() --> T is an object that has a default constructor.
 
 #### constraint to an interface
