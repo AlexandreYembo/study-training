@@ -15,7 +15,7 @@ Introduce to .NET framework the concept of type parameters, that is possible des
   
   6- Information on the types that are used in a generic data type may be obtained at run-time by using reflection.
 
-### Contraint
+### Constraint
 
 
 where T : IComparable --> As in applying a constraint to an interface.
