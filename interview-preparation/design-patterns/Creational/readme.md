@@ -6,6 +6,7 @@ Creational design patterns provide various object creation mechanisms, which inc
    1- These design patterns are all about class instantiation.
    
    2- Class-creation patterns. (use inheritance effectively in the instantiation process)
+   
    3- Object-creational patterns. (use delegation effectively to get the job done)
     
 #### Sometimes creational patterns are complementary:
