@@ -1,0 +1,10 @@
+/Users/alexandreyembo/Projects/Development/GitRepositories/study-training/interview-preparation/csharp/project/bin/Debug/netcoreapp3.1/project.deps.json
+/Users/alexandreyembo/Projects/Development/GitRepositories/study-training/interview-preparation/csharp/project/bin/Debug/netcoreapp3.1/project.runtimeconfig.json
+/Users/alexandreyembo/Projects/Development/GitRepositories/study-training/interview-preparation/csharp/project/bin/Debug/netcoreapp3.1/project.runtimeconfig.dev.json
+/Users/alexandreyembo/Projects/Development/GitRepositories/study-training/interview-preparation/csharp/project/bin/Debug/netcoreapp3.1/project.dll
+/Users/alexandreyembo/Projects/Development/GitRepositories/study-training/interview-preparation/csharp/project/bin/Debug/netcoreapp3.1/project.pdb
+/Users/alexandreyembo/Projects/Development/GitRepositories/study-training/interview-preparation/csharp/project/obj/Debug/netcoreapp3.1/project.csprojAssemblyReference.cache
+/Users/alexandreyembo/Projects/Development/GitRepositories/study-training/interview-preparation/csharp/project/obj/Debug/netcoreapp3.1/project.AssemblyInfoInputs.cache
+/Users/alexandreyembo/Projects/Development/GitRepositories/study-training/interview-preparation/csharp/project/obj/Debug/netcoreapp3.1/project.AssemblyInfo.cs
+/Users/alexandreyembo/Projects/Development/GitRepositories/study-training/interview-preparation/csharp/project/obj/Debug/netcoreapp3.1/project.dll
+/Users/alexandreyembo/Projects/Development/GitRepositories/study-training/interview-preparation/csharp/project/obj/Debug/netcoreapp3.1/project.pdb
