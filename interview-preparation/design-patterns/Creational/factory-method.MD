@@ -7,7 +7,7 @@ Is a ```creational design pattern``` that provides an interface for creating obj
 ##### 2- Why do you implement Factory Method?
 To provide an interface that can help you integrate a new service (class). You can implement factory in services that integrates with third part library, for example.
 
-##### 3- how is it work?
+##### 3- how does it work?
 This pattern suggests that you replace direct object construction calls (using the new operator) with calls to a special factory method.
 
 ##### 4- Concept of this pattern
