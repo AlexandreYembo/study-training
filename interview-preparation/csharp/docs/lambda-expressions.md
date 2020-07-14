@@ -3,8 +3,11 @@
 ### What is?
 An anonymous method
   1- No access modifier
+  
   2- No name
+  
   3- No return statement
+  
   
  ### Wy do we use them?
  For convenience. We can write less code and achieve the same thing, plus our code would be more readable.
