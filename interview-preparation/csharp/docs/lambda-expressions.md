@@ -10,7 +10,7 @@ An anonymous method
   3- No return statement
   
   
- ### Wy do we use them?
+ ### Why do we use them?
  For convenience. We can write less code and achieve the same thing, plus our code would be more readable.
  ```c#
   class Program {
