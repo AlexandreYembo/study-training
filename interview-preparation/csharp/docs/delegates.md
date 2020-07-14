@@ -1,6 +1,7 @@
 # Delegates
   1 - An object that knows how to call a method or a group of methods.
-  2- A reference or a pointer to a function.
+ 
+ 2- A reference or a pointer to a function.
 
 #### How do we use Delegate to make this extensible?
 
