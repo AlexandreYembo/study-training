@@ -1,7 +1,8 @@
 # Extension Methods
 ##### Allow us to add methods to an existing class without:
-  1- changing its source code, or
-  2- creating a new class that inherits from it.
+1- changing its source code, or
+  
+2- creating a new class that inherits from it.
 
 ```c#
   public static class StringExtensions
