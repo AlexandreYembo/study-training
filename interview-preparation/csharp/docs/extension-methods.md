@@ -33,7 +33,3 @@
   }
 ```
 
-#### When we are talking about extensions, these static methods can be troublesome at times.
-The problem is if there are new implementation that uses the same name of your method.
-#### *** Basically the instance methods get priority over a static methods. So your code will never be executed.
-Microsoft suggest you to use extension methods only when you really have to.
