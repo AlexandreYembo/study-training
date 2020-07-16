@@ -10,7 +10,7 @@
 
 5- [Lambda Expressions](https://github.com/AlexandreYembo/study-training/blob/master/interview-preparation/csharp/docs/lambda-expressions.md)
 
-6- [Events and Delegates](https://github.com/AlexandreYembo/study-training/tree/master/interview-preparation/csharp/EventAndDelegates)
+6- [Events and Delegates](https://github.com/AlexandreYembo/study-training/tree/master/interview-preparation/csharp/EventAndDelegates.md)
 
 7- [Extension Methods](https://github.com/AlexandreYembo/study-training/blob/master/interview-preparation/csharp/docs/extension-methods.md)
 
