@@ -14,9 +14,13 @@
 
 
 Select -> Is used for projections or transformations.
+
 Single or SingleOrDefault -> Is the same argument as the where, that returns only element of sequence that satisfied condition
+
 First or FirstOrDefault -> Is used to get the first object in a collection.
+
 Last or LastOrDefault -> Is used to get the last object in a collection.
+
 Skip and Take -> is used to pagination
 
 #### LINQ Extension Methods
