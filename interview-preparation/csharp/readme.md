@@ -18,7 +18,7 @@
 
 9- [Nullable Types](https://github.com/AlexandreYembo/study-training/blob/master/interview-preparation/csharp/docs/nullable-types.md)
 
-10- [Dynamic](https://github.com/AlexandreYembo/study-training/blob/master/interview-preparation/sharp/docs/dynamic.md)
+10- [Dynamic](https://github.com/AlexandreYembo/study-training/blob/master/interview-preparation/csharp/docs/dynamic.md)
 
 11- [Exception Handling](https://github.com/AlexandreYembo/study-training/blob/master/interview-preparation/csharp/docs/exception-handling.md)
 
