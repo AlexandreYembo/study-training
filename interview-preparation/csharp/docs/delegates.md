@@ -1,6 +1,7 @@
 # Delegates
   1 - An object that knows how to call a method or a group of methods.
-  2- A reference or a pointer to a function.
+ 
+ 2- A reference or a pointer to a function.
 
 #### How do we use Delegate to make this extensible?
 
@@ -18,10 +19,13 @@
     photo.Save();
   }
 ```
-  1- this code does not know what filter will be applied
-  2- the responsability of the client of this code.
-  3- the client decidade if they will apply filter for only brightness and contrast or another one.
-  4- this framework does not have to be recompiled and redeployed, which makes it extensible.
+ 1- this code does not know what filter will be applied
+  
+ 2- the responsability of the client of this code.
+ 
+ 3- the client decidade if they will apply filter for only brightness and contrast or another one.
+ 
+ 4- this framework does not have to be recompiled and redeployed, which makes it extensible.
   
 3- Implementation
 ```c#
