@@ -1,11 +1,15 @@
 #   Linq
   1- Stands for: Language Integrated Query.
+  
   2- Gives you the capability to query objects.
   
 ## You can query
   1- Objects in memory, eg. collections (LINQ to Objects)
+  
   2- Databases (LINQ to Entities)
+  
   3- XML (LINQ to XML)
+  
   4- ADO .Net Data Set (LINQ to Data Sets)
 
 
