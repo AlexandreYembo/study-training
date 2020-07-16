@@ -49,7 +49,7 @@ Result: ```O(1)```
 ```
 Result: ```O(1000)```
 
-#### - 1 - BigO Name: O(1) --> Constant Time
+#### - 2 - BigO Name: O(1) --> Constant Time
 No matter how many times the array increse, we are always just grabbing the first item in the array. It's a flat line in terms of scalability.
 
 Performance: ```Excellent```. In the Big-O complexity chart it is considered ```Green``` colour.
@@ -62,6 +62,7 @@ Number of       2
 Operations      1   x   x   x
                 0   1   2   3   4
                     Elements
+```
 
 ```c#
 function compressFirstBos(boxes){
