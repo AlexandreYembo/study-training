@@ -7,8 +7,10 @@
       - at run-time
 
 .NET 4 added the dynamic capability, to improve interoperability with:
+  
   1- COM (eg writing office applications)
-  2- Dynamic languages (IronPython)
+ 
+ 2- Dynamic languages (IronPython)
 
 ###### ***Without dynamics, you have to use reflection.
 

@@ -40,6 +40,7 @@
 
 
 Heap/Stak
+http://net-informations.com/faq/general/valuetype-referencetype.htm
 
 Interface
 

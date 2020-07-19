@@ -10,7 +10,7 @@
 
 5- [Lambda Expressions](https://github.com/AlexandreYembo/study-training/blob/master/interview-preparation/csharp/docs/lambda-expressions.md)
 
-6- [Events and Delegates](https://github.com/AlexandreYembo/study-training/tree/master/interview-preparation/csharp/EventAndDelegates)
+6- [Events and Delegates](https://github.com/AlexandreYembo/study-training/blob/master/interview-preparation/csharp/docs/events_and_delegates.md)
 
 7- [Extension Methods](https://github.com/AlexandreYembo/study-training/blob/master/interview-preparation/csharp/docs/extension-methods.md)
 
@@ -18,7 +18,7 @@
 
 9- [Nullable Types](https://github.com/AlexandreYembo/study-training/blob/master/interview-preparation/csharp/docs/nullable-types.md)
 
-10- [Dynamic](https://github.com/AlexandreYembo/study-training/blob/master/interview-preparation/sharp/docs/dynamic.md)
+10- [Dynamic](https://github.com/AlexandreYembo/study-training/blob/master/interview-preparation/csharp/docs/dynamic.md)
 
 11- [Exception Handling](https://github.com/AlexandreYembo/study-training/blob/master/interview-preparation/csharp/docs/exception-handling.md)
 
@@ -40,6 +40,7 @@
 
 
 Heap/Stak
+http://net-informations.com/faq/general/valuetype-referencetype.htm
 
 Interface
 
