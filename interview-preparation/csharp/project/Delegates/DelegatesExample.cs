@@ -33,6 +33,10 @@ namespace project.Delegates
     /// </summary>
     public class DelegatesImplements 
     {
+        public DelegatesImplements(){} //constructor
+
+        ~DelegatesImplements(){}//Finalizer
+
        public void Process(){
            var defaultDelegates = new DefaultDelegates();
            var customDelegates = new CustomDelegates();
@@ -40,12 +44,22 @@ namespace project.Delegates
             DefaultDelegates.PhotoFilterHandler filterHandler = customDelegates.ProcessFilter; //call the first delegate method
             filterHandler += ProcessFilter2;    //call the second delegate method
 
+            filterHandler += (t) => {
+                t.Name += ", Third Delegate";
+                Console.WriteLine(t.Name);
+            };
+
+            filterHandler += delegate(Photo t){
+                t.Name += ", Four Delegate";
+                Console.WriteLine(t.Name);
+            };
+
             defaultDelegates.Process("C:/", filterHandler);
        }
 
         private void ProcessFilter2(Photo photo)
         {
-            photo.Name = "Second Delegate";
+            photo.Name += ", Second Delegate";
             Console.WriteLine(photo.Name);
         }
     }

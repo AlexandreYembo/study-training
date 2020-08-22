@@ -55,5 +55,5 @@ Compiler, managed assemblit, CLT, JIT Compiler, Machine Code (https://docs.micro
 
 Keyword Lock
 
-CurrentBag
+CurrentBag -> Represents a thread-safe, unordered collection of objects.
 
