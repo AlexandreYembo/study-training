@@ -15,7 +15,7 @@ I genuainely believe that there are 2 types of employee:
  #### Why should we hire you?
  I saw the job description and I fully believe that this is a role that I am looking for and it is because it shows how challenge is and that I could give all my endeavour to provide high standards and positive result for the company. In addiction, I am always looking forward for the employer goals and I would like to have a chance to work for the Cubic company and be part of this team that I believe that has new challenges everyday.
  Also these challenges when achieved provide a great result once there will have positive feedbacks from business department and also the customer satisfaction.
-In addition, I am a proactive person who worked previously in a role that identitied an issue and I solved it.
+Moreover, I am a proactive person who worked previously in a role that identitied an issue and I solved it.
 
 #### Why do you want to work for us?
 I have studied the product and business of Cubic Telecom and this impact me when I saw how it delivered such high technologies for the customers, by providing IOT and comunication for automotive industries and how it will grown along the year, when technologies change everyday. So it would be a great opportunity to be part of this team and how I could achieve the business's goal.
