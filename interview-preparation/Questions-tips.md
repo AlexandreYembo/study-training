@@ -34,7 +34,7 @@ https://www.youtube.com/watch?v=umQKkcBPL08
 
 ###### Go through the skills needed for the job and provide examples of how you displayed each of them in a previous role.
 
-###### Should that you are proactive indidual who indeified problems in previous jobs and found solutions.
+###### Show that you are proactive indidual who identified problems in previous jobs and found solutions.
 
 #### Why do you want to work for us?
 ###### Research their services, products, working culture and expansion plans to find out things about the company that appeal to you.
@@ -70,3 +70,4 @@ For example in my previous job I've learnt new technology (node JS) and there wa
 ###### Never say no. Try to demonstrate that you researched the company and serious about the role.
 - What are the biggest challenges facing the company today?
 - Does the company rin any training schemes?
+

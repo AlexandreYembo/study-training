@@ -8,27 +8,27 @@
 
 
 #### Technologies
-- c#
+- c#    - ok
 
-- .Net Framework 4x
+- .Net Framework 4x - ok
 
-- Web API
+- Web API   - OK
 
-- HTTP, REST, SOAP/Restfull
+- HTTP, REST, SOAP/Restfull - OK
 
-- WebServices
+- WebServices - OK
 
-- WCF
+- WCF   - OK
 
-- OWIN & Katana
+- OWIN & Katana - ok
 
-- JSON
+- JSON - OK
 
-- Asyc processing
+- Async processing  - ok
 
 - Inversion of control and DI
 
-- Containers (.net core, windsor castle, etc)
+- Containers - ok
 
 - TDD - Tests concept (Unit testing and mocking), writing unit tests. - OK
 
@@ -40,6 +40,6 @@
 
 - cloud environments (Azure)
 
-- Scrum
+- Scrum - ok
 
 - CI/CD
