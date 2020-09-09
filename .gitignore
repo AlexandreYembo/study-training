@@ -9,3 +9,4 @@ Interview/.DS_Store
 .vscode
 *obj*
 *bin*
+.DS_Store
