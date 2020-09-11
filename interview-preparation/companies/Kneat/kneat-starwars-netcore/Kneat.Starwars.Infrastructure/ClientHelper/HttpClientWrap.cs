@@ -1,3 +1,4 @@
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -12,13 +13,24 @@ namespace Kneat.Starwars.Infrastructure.ClientHelper
     {
         private readonly HttpClient _httpClient;
 
+        /// <summary>
+        /// Create the HttpClient object
+        /// </summary>
         public HttpClientWrap()
         {
             _httpClient = new HttpClient();
         }
 
+        /// <summary>
+        /// make get request to an endpoint
+        /// </summary>
+        /// <param name="requestUri"></param>
+        /// <returns></returns>
         public async Task<HttpResponseMessage> GetAsync(string requestUri) => await _httpClient.GetAsync(requestUri);
 
+        /// <summary>
+        /// Destroy the httpClient object
+        /// </summary>
         public void Dispose() => _httpClient.Dispose();
     }
 }

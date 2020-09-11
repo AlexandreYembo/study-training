@@ -1,17 +1,29 @@
 ﻿using System;
-using Kneat.Starwars.Services.Helpers;
+using System.Threading.Tasks;
+using Kneat.Starwars.Services;
+using Kneat.Starwars.Services.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Kneat.Starwars.Console
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             var serviceCollection = RegisterStartup();
             var serviceProvider = serviceCollection.BuildServiceProvider();
-            var calculatorService = serviceProvider.GetService<IMGLTCalculator>();
-            var stops = calculatorService.CalculateStopsByDistance(1000000, "6 months", 20);
+            var starshipsService = serviceProvider.GetService<IStarshipsService>();
+
+            var distance = int.Parse(System.Console.ReadLine());
+            
+            var starships =  await starshipsService.GetAllStarShipsAndAddStop(distance);
+            
+            foreach (var result in starships)
+            {
+                System.Console.WriteLine(result.Name + "=" + result.Stops);
+            }
+
+            starshipsService.Dispose();
         }
 
         private static ServiceCollection RegisterStartup()
