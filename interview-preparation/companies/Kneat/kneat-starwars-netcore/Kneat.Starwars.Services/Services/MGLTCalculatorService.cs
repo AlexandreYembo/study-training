@@ -21,29 +21,29 @@ namespace Kneat.Starwars.Services
         /// </summary>
         /// <param name="distance"></param>
         /// <param name="consumables"></param>
-        /// <param name="velocity"></param>
+        /// <param name="mglt"></param>
         /// <returns></returns>
-        public double CalculateStopsByDistance(double distance, string consumables, string velocity)
+        public double CalculateStopsByDistance(double distance, string consumables, string mglt)
         {
-            double dVelocity = 0;
-            double.TryParse(velocity, out dVelocity);
+            double megaLights = 0;
+            double.TryParse(mglt, out megaLights);
 
-            if(dVelocity == 0)
-                return dVelocity;
+            if(megaLights == 0)
+                return megaLights;
                 
-            var hours = GetHours(distance, dVelocity);
+            var hours = GetHours(distance, megaLights);
             var consumablesHours = ConvertCosumablesToHours(consumables);
             var stops = consumablesHours == 0 ? consumablesHours : hours / consumablesHours;
             return Math.Floor(stops);
         }
 
         /// <summary>
-        /// Get hours by distance devide by velocity
+        /// Get hours by distance devide by megaLights
         /// </summary>
         /// <param name="distance"></param>
-        /// <param name="velocity"></param>
+        /// <param name="megaLights"></param>
         /// <returns></returns>
-        private double GetHours(double distance, double velocity) => distance / velocity;
+        private double GetHours(double distance, double megaLights) => distance / megaLights;
 
         /// <summary>
         /// Get Consumable hours per Starship

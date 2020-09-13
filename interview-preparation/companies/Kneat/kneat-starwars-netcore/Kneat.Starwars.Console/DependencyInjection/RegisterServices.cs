@@ -1,7 +1,24 @@
+using Kneat.Starwars.Services;
+using Kneat.Starwars.Services.Helpers;
+using Kneat.Starwars.Services.Interfaces;
+using Kneat.Starwars.Services.Services;
+using Kneat.Starwars.Services.TimeCalculation;
+using Microsoft.Extensions.DependencyInjection;
+
 namespace Kneat.Starwars.Console.DependencyInjection
 {
-    public class RegisterServices
+    public static class RegisterServices
     {
-        
+        public static void RegisterToServices(this IServiceCollection services)
+        {
+            services.AddTransient<IStarshipsService, StarshipsService>();
+            services.AddTransient<IMGLTCalculatorService, MGLTCalculatorService>();
+            services.AddTransient<IConvertConsumableHelper, ConvertConsumableHelper>();
+            services.AddTransient<IHours, Hours>();
+            services.AddTransient<HoursPerDay>();
+            services.AddTransient<HoursPerWeek>();
+            services.AddTransient<HoursPerMonth>();
+            services.AddTransient<HoursPerYear>();
+        }
     }
 }

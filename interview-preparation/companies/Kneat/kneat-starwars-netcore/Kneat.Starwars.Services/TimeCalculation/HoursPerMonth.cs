@@ -20,6 +20,6 @@ namespace Kneat.Starwars.Services.TimeCalculation
         /// Get hours, define as parameter take an AVG of 365 days divided by 12 months.
         /// </summary>
         /// <returns></returns>
-        public double GetHours() => _hours.Get(365/12);
+        public double GetHours() => _hours.Get(365) / 12;
     }
 }

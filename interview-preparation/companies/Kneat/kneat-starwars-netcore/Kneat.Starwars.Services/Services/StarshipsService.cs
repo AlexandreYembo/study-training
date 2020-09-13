@@ -26,13 +26,13 @@ namespace Kneat.Starwars.Services.Services
             int pagination = 0;
             var starships = new List<Starships>();
 
-            var response = new StartshipResponse(){ Next = "1" };
+            var response = new StarshipResponse(){ Next = "1" };
             while(response.Next != null){
                 response = await _repository.GetAllStarshipsAsync(++pagination);
                 starships.AddRange(response.Results);
             }
             
-            ApplyStopsToStartship(starships);
+            ApplyStopsToStartship(starships, distance);
                
             return starships;
         }
@@ -41,7 +41,7 @@ namespace Kneat.Starwars.Services.Services
         /// Apply count of stops per starship
         /// </summary>
         /// <param name="starships"></param>
-        private void ApplyStopsToStartship(List<Starships> starships) => starships.ForEach(f => f.AddStops(_calculatorService.CalculateStopsByDistance(distance, f.Consumables, f.MGLT)));
+        private void ApplyStopsToStartship(List<Starships> starships, double distance) => starships.ForEach(f => f.AddStops(_calculatorService.CalculateStopsByDistance(distance, f.Consumables, f.MGLT)));
 
         /// <summary>
         /// Dispose the repository object

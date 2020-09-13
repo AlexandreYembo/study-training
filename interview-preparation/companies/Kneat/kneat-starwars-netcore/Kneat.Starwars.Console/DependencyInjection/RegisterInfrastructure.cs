@@ -1,7 +1,20 @@
+using Kneat.Starwars.Infrastructure.ClientHelper;
+using Kneat.Starwars.Infrastructure.Interfaces;
+using Microsoft.Extensions.DependencyInjection;
+
 namespace Kneat.Starwars.Console.DependencyInjection
 {
-    public class RegisterInfrastructure
+    public static class RegisterInfrastructure
     {
-        
+        /// <summary>
+        /// Register DI container for Infrastructure
+        /// </summary>
+        /// <param name="services"></param>
+        public static void RegisterToInfrastructure(this IServiceCollection services)
+        {
+            services.AddTransient<IApiProxy, ApiProxy>();
+            services.AddTransient<IApiProxy, ApiProxy>();
+            services.AddTransient<IHttpClient, HttpClientWrap>();
+        }
     }
 }

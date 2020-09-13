@@ -3,13 +3,13 @@ using Xunit;
 
 namespace Kneat.Starwars.UnitTesting
 {
-    public class TimeCalculatorTests
+    public class HourCalculatorTests
     {
         private IHoursCalculation _hoursCalculation;
         
-        [Fact(DisplayName="Get Hours per day")]
+        [Fact(DisplayName="Should Get Hours per day")]
         [Trait("Hours", "Hours Calculation")]
-        public void GetHoursPerDay()
+        public void HoursCalculation_ShouldGetHoursPerDay()
         {
             //Arrange
             _hoursCalculation = new HoursPerDay(new Hours());
@@ -19,9 +19,9 @@ namespace Kneat.Starwars.UnitTesting
             Assert.Equal(24, result);
         }
 
-        [Fact(DisplayName="Get Hours per week")]
+        [Fact(DisplayName="Should Get Hours per week")]
         [Trait("Hours", "Hours Calculation")]
-        public void GetHoursPerWeek()
+        public void HoursCalculation_ShouldGetHoursPerWeek()
         {
             //Arrange
             _hoursCalculation = new HoursPerWeek(new Hours());
@@ -31,21 +31,21 @@ namespace Kneat.Starwars.UnitTesting
             Assert.Equal(168, result);
         }
 
-        [Fact(DisplayName="Get Hours per month")]
+        [Fact(DisplayName="Should Get Hours per month")]
         [Trait("Hours", "Hours Calculation")]
-        public void GetHoursPerMonth()
+        public void HoursCalculation_ShouldGetHoursPerMonth()
         {
             //Arrange
             _hoursCalculation = new HoursPerMonth(new Hours());
             //Act
             var result = _hoursCalculation.GetHours();
             //Assert
-            Assert.Equal(720, result);
+            Assert.Equal(730, result);
         }
 
-        [Fact(DisplayName="Get Hours per year")]
+        [Fact(DisplayName="Should Get Hours per year")]
         [Trait("Hours", "Hours Calculation")]
-        public void GetHoursPerYear()
+        public void HoursCalculaton_ShouldGetHoursPerYear()
         {
             //Arrange
             _hoursCalculation = new HoursPerYear(new Hours());
@@ -53,6 +53,18 @@ namespace Kneat.Starwars.UnitTesting
             var result = _hoursCalculation.GetHours();
             //Assert
             Assert.Equal(8760, result);
+        }
+
+        [Fact(DisplayName="Should Not Get Hours per year")]
+        [Trait("Hours", "Hours Calculation")]
+        public void HoursCalcualtion_ShouldNotGetHours()
+        {
+            //Arrange
+            _hoursCalculation = new UnknowTime(new Hours());
+            //Act
+            var result = _hoursCalculation.GetHours();
+            //Assert
+            Assert.Equal(0, result);
         }
     }
 }

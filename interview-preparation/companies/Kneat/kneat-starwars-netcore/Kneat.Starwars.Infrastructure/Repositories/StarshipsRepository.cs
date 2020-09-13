@@ -29,8 +29,8 @@ namespace Kneat.Starwars.Infrastructure.Repositories
         /// </summary>
         /// <param name="pagination"></param>
         /// <returns></returns>
-        public async Task<StartshipResponse> GetAllStarshipsAsync(int pagination){
-            var response = await _api.GetAsync<StartshipResponse>($"starships/?page={pagination}");
+        public async Task<StarshipResponse> GetAllStarshipsAsync(int pagination){
+            var response = await _api.GetAsync<StarshipResponse>($"starships/?page={pagination}");
             return response;
         }
 

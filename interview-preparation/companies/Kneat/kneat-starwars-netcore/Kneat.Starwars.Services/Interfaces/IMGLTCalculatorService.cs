@@ -5,6 +5,6 @@ namespace Kneat.Starwars.Services.Interfaces
     /// </summary>
     public interface IMGLTCalculatorService
     {
-         double CalculateStopsByDistance(double distance, string consumables, string velocity);
+         double CalculateStopsByDistance(double distance, string consumables, string mglt);
     }
 }

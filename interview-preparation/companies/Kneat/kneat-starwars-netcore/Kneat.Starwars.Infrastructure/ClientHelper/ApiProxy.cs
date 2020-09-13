@@ -1,7 +1,4 @@
-using System;
-using System.Net.Http;
 using System.Threading.Tasks;
-using Kneat.Starwars.Infrastructure.ClientHelper;
 using Kneat.Starwars.Infrastructure.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
@@ -13,7 +10,7 @@ namespace Kneat.Starwars.Infrastructure.ClientHelper
     /// </summary>
     public class ApiProxy : IApiProxy
     {
-        private readonly string _apiUrl;
+        private readonly IConfiguration _configuration;
 
         private readonly IHttpClient _httpClient;
 
@@ -26,7 +23,7 @@ namespace Kneat.Starwars.Infrastructure.ClientHelper
         public ApiProxy(IHttpClient client, IConfiguration configuration)
         {
             _httpClient = client;
-            _apiUrl = configuration.GetSection("api").Value;
+            _configuration = configuration;
         }
 
         /// <summary>
@@ -37,6 +34,8 @@ namespace Kneat.Starwars.Infrastructure.ClientHelper
         /// <returns></returns>
         public async Task<T> GetAsync<T>(string resource)
         {
+            var _apiUrl = _configuration.GetSection("api").Value;
+
             var responseHttp = await _httpClient.GetAsync($"{_apiUrl}/{resource}");
 
             if(responseHttp.IsSuccessStatusCode)

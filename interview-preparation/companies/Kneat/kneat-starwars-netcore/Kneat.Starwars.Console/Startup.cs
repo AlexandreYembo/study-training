@@ -1,7 +1,6 @@
 using System;
 using System.IO;
-using Kneat.Starwars.Infrastructure.ClientHelper;
-using Kneat.Starwars.Infrastructure.Interfaces;
+using Kneat.Starwars.Console.DependencyInjection;
 using Kneat.Starwars.Infrastructure.Repositories;
 using Kneat.Starwars.Repositories.Interfaces;
 using Kneat.Starwars.Services;
@@ -27,19 +26,10 @@ namespace Kneat.Starwars.Console
             .Build();
 
             services.AddSingleton<IConfiguration>(provider => configuration);
-            services.AddTransient<IStarshipsService, StarshipsService>();
-            services.AddTransient<IStarshipsRepository, StarshipsRepository>();
-            services.AddTransient<IMGLTCalculatorService, MGLTCalculatorService>();
-            services.AddTransient<IConvertConsumableHelper, ConvertConsumableHelper>();
-            services.AddTransient<IHours, Hours>();
-            services.AddTransient<HoursPerDay>();
-            services.AddTransient<HoursPerWeek>();
-            services.AddTransient<HoursPerMonth>();
-            services.AddTransient<HoursPerYear>();
-
-            services.AddTransient<IApiProxy, ApiProxy>();
-            services.AddTransient<IApiProxy, ApiProxy>();
-            services.AddTransient<IHttpClient, HttpClientWrap>();
+            
+            services.RegisterToServices();
+            services.RegisterToRepositories();
+            services.RegisterToInfrastructure();
 
             services.AddTransient<Func<string, IHoursCalculation>>(serviceProvider => timeType =>
             {

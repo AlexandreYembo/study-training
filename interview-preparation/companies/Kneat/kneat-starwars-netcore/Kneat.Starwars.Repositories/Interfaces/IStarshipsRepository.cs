@@ -11,6 +11,6 @@ namespace Kneat.Starwars.Repositories.Interfaces
     /// </summary>
     public interface IStarshipsRepository: IDisposable
     {
-         Task<StartshipResponse> GetAllStarshipsAsync(int pagination);
+         Task<StarshipResponse> GetAllStarshipsAsync(int pagination);
     }
 }
