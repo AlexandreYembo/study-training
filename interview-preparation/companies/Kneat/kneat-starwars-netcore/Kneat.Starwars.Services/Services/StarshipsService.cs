@@ -4,7 +4,7 @@ using Kneat.Starwars.Repositories.Interfaces;
 using Kneat.Starwars.Repositories.Models;
 using Kneat.Starwars.Services.Interfaces;
 
-namespace Kneat.Starwars.Services.Services
+namespace Kneat.Starwars.Services
 {
     /// <summary>
     /// Startship service is the main Service that has many roles.
@@ -26,7 +26,7 @@ namespace Kneat.Starwars.Services.Services
             int pagination = 0;
             var starships = new List<Starships>();
 
-            var response = new StarshipResponse(){ Next = "1" };
+            var response = new StarshipResponse(){ Next = "" };
             while(response.Next != null){
                 response = await _repository.GetAllStarshipsAsync(++pagination);
                 starships.AddRange(response.Results);

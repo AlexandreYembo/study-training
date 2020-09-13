@@ -14,6 +14,9 @@ namespace Kneat.Starwars.Console
             var serviceProvider = serviceCollection.BuildServiceProvider();
             var starshipsService = serviceProvider.GetService<IStarshipsService>();
 
+            System.Console.WriteLine("Hello, welcome to the Starwars Universe. Please provide the distance you want for calculating how many stops you will need for the Starships!");
+
+            System.Console.WriteLine("Inform the Distance:");
             var distance = int.Parse(System.Console.ReadLine());
             
             var starships =  await starshipsService.GetAllStarShipsAndAddStop(distance);

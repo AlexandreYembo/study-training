@@ -8,7 +8,7 @@ namespace Kneat.Starwars.Infrastructure.ClientHelper
     /// <summary>
     /// Class used to call the webapi
     /// </summary>
-    public class ApiProxy : IApiProxy
+    public class ApiClient : IApiClient
     {
         private readonly IConfiguration _configuration;
 
@@ -20,7 +20,7 @@ namespace Kneat.Starwars.Infrastructure.ClientHelper
         /// </summary>
         /// <param name="client"></param>
         /// <param name="configuration"></param>
-        public ApiProxy(IHttpClient client, IConfiguration configuration)
+        public ApiClient(IHttpClient client, IConfiguration configuration)
         {
             _httpClient = client;
             _configuration = configuration;

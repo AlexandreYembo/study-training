@@ -1,15 +1,7 @@
-using Kneat.Starwars.Infrastructure.ClientHelper;
-using Kneat.Starwars.Infrastructure.Interfaces;
-using Kneat.Starwars.Infrastructure.Repositories;
 using Kneat.Starwars.Repositories.Interfaces;
-using Kneat.Starwars.Repositories.Models;
 using Kneat.Starwars.Services;
-using Kneat.Starwars.Services.Helpers;
 using Kneat.Starwars.Services.Interfaces;
-using Kneat.Starwars.Services.Services;
-using Kneat.Starwars.Services.TimeCalculation;
 using Kneat.Starwars.UnitTesting.Stub;
-using Microsoft.Extensions.Configuration;
 using Moq;
 using Moq.AutoMock;
 using Xunit;

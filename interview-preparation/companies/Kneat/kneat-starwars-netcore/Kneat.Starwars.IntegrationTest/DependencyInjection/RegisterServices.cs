@@ -3,7 +3,7 @@ using Kneat.Starwars.Services.Interfaces;
 using Kneat.Starwars.Services.TimeCalculation;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Kneat.Starwars.Console.DependencyInjection
+namespace Kneat.Starwars.IntegrationTest.DependencyInjection
 {
     public static class RegisterServices
     {

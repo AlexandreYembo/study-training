@@ -1,5 +1,4 @@
 using System;
-using Kneat.Starwars.Services.Helpers;
 using Kneat.Starwars.Services.Interfaces;
 
 namespace Kneat.Starwars.Services
@@ -9,9 +8,9 @@ namespace Kneat.Starwars.Services
     /// </summary>
     public class MGLTCalculatorService : IMGLTCalculatorService
     {
-        public readonly IConvertConsumableHelper _convertConsumable;
+        public readonly IConvertConsumableService _convertConsumable;
 
-        public MGLTCalculatorService(IConvertConsumableHelper convertConsumable)
+        public MGLTCalculatorService(IConvertConsumableService convertConsumable)
         {
             _convertConsumable = convertConsumable;
         }
@@ -28,8 +27,8 @@ namespace Kneat.Starwars.Services
             double megaLights = 0;
             double.TryParse(mglt, out megaLights);
 
-            if(megaLights == 0)
-                return megaLights;
+            if(megaLights == 0 || consumables == "unknown")
+                return 0;
                 
             var hours = GetHours(distance, megaLights);
             var consumablesHours = ConvertCosumablesToHours(consumables);

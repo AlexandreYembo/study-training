@@ -1,19 +1,19 @@
 using System;
 using System.IO;
-using Kneat.Starwars.Console.DependencyInjection;
+using Kneat.Starwars.IntegrationTest.DependencyInjection;
 using Kneat.Starwars.Services.TimeCalculation;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Kneat.Starwars.Console
+namespace Kneat.Starwars.IntegrationTest.Config
 {
-    public static class Startup
+    public class StarwarsStartup
     {
-        public static IConfigurationRoot configuration;
+        public IConfigurationRoot configuration;
 
-        public static void Main(IServiceCollection services)
+        public void Config(IServiceCollection services)
         {
-           // Build configuration
+             // Build configuration
         configuration = new ConfigurationBuilder()
             .SetBasePath(Directory.GetParent(AppContext.BaseDirectory).FullName)
             .AddJsonFile("appsettings.json", false)

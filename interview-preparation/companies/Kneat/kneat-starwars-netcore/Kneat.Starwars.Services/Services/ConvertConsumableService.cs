@@ -1,12 +1,13 @@
 using System;
+using Kneat.Starwars.Services.Interfaces;
 using Kneat.Starwars.Services.TimeCalculation;
 
-namespace Kneat.Starwars.Services.Helpers
+namespace Kneat.Starwars.Services
 {
     /// <summary>
     /// This class is responsable to calculate the Consumable for each starship
     /// </summary>
-    public class ConvertConsumableHelper : IConvertConsumableHelper
+    public class ConvertConsumableService : IConvertConsumableService
     {
         private readonly Func<string, IHoursCalculation> _hoursCalculation;
 
@@ -16,7 +17,7 @@ namespace Kneat.Starwars.Services.Helpers
         /// this interface, and based on the type of time (day, week, month or year) it returns the proper calculation of hours.
         /// </summary>
         /// <param name="hoursCalculation"></param>
-        public ConvertConsumableHelper(Func<string, IHoursCalculation> hoursCalculation)
+        public ConvertConsumableService(Func<string, IHoursCalculation> hoursCalculation)
         {
             _hoursCalculation = hoursCalculation;
         }

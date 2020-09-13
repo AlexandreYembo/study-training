@@ -13,13 +13,13 @@ namespace Kneat.Starwars.Infrastructure.Repositories
     /// </summary>
     public class StarshipsRepository : IStarshipsRepository, IDisposable
     {
-        protected readonly IApiProxy _api;
+        protected readonly IApiClient _api;
 
         /// <summary>
         /// Inject the proxy via Dependency injection
         /// </summary>
         /// <param name="api"></param>
-        public StarshipsRepository(IApiProxy api)
+        public StarshipsRepository(IApiClient api)
         {
             _api = api;
         }

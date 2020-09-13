@@ -13,16 +13,16 @@ using Xunit;
 
 namespace Kneat.Starwars.UnitTesting
 {
-    public class ApiProxyTests
+    public class ApiClientTests
     {
         private readonly AutoMocker _mocker;
         private readonly Mock<IHttpClient> _httpClient;
         private readonly Mock<IConfiguration> _configuration;
         private readonly Mock<IConfigurationSection> _configurationSection;
 
-        private IApiProxy _apiProxy;
+        private IApiClient _apiProxy;
 
-        public ApiProxyTests()
+        public ApiClientTests()
         {
             _mocker = new AutoMocker();
             _configurationSection = _mocker.GetMock<IConfigurationSection>();
@@ -34,7 +34,7 @@ namespace Kneat.Starwars.UnitTesting
                                              .Returns(_configurationSection.Object);
                                              
             _httpClient = _mocker.GetMock<IHttpClient>();
-            _apiProxy = _mocker.CreateInstance<ApiProxy>();
+            _apiProxy = _mocker.CreateInstance<ApiClient>();
         }
 
 
