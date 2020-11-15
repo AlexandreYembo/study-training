@@ -28,6 +28,10 @@
 
 11 - [Routing](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/11-Routing.md) 
 
+12 - [Observables](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/12-Observables.md)
+
+13 - [Forms](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/13-Forms.md)
+
 [Version notation](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/versions-notation.md) 
 
 [TypeScript Tips:](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/ts-tips.md) 
