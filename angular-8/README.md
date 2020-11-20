@@ -32,6 +32,10 @@
 
 13 - [Forms](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/13-Forms.md)
 
+14 - [Pipes](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/14-Pipes.md)
+
+15 - [Http Request](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/15-Http-requests.md)
+
 [Version notation](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/versions-notation.md) 
 
 [TypeScript Tips:](https://github.com/AlexandreYembo/study-training/blob/master/angular-8/docs/ts-tips.md) 
