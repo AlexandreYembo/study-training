@@ -1,5 +1,7 @@
 # Big O Notation
-Big O noatation is the language we use for talking about how long an algorithm takes to run.
+References: https://www.bigocheatsheet.com/
+
+Big O notation is the language we use for talking about how long an algorithm takes to run.
 
 - We can measure in terms of efficiency what is good or bad code.
 
