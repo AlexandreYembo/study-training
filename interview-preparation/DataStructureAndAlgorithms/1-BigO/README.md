@@ -5,7 +5,7 @@ Big O notation is the language we use for talking about how long an algorithm ta
 
 - We can measure in terms of efficiency what is good or bad code.
 
-- We can measure what is code that can scale that as the number of aeeays or inputs increases.
+- We can measure what is code that can scale that as the number of Arrays or inputs increases.
 
 
 ### Linear measure
